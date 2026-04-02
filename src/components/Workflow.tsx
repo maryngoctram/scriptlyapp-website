@@ -5,17 +5,17 @@ const Workflow = () => {
     {
       icon: Upload,
       title: "Upload Scene",
-      description: "Upload any scene in PDF or text format."
+      description: "Upload your script or scene in PDF or text format."
     },
     {
       icon: Brain,
       title: "AI Processes",
-      description: "AI analyzes and assigns character lines"
+      description: "AI analyzes dialogue and assigns character lines"
     },
     {
       icon: Play,
       title: "Rehearse",
-      description: "Practice with AI feedback and insights"
+      description: "Rehearse and memorize lines with AI feedback."
     }
   ];
 
@@ -30,7 +30,7 @@ const Workflow = () => {
             </span>
           </h2>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground max-w-2xl mx-auto">
-            Transform any scene into a personalized rehearsal experience in three simple steps.
+            Transform any script into a personalized rehearsal flow for actors in three simple steps.
           </p>
         </div>
 

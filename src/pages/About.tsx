@@ -26,7 +26,7 @@ const About = () => {
             </span>
           </h1>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            We're passionate about helping actors master their craft through innovative technology and proven techniques.
+            We're passionate about helping actors rehearse smarter with AI-powered tools.
           </p>
         </div>
       </section>
@@ -40,10 +40,10 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                Scriptly was born from a simple belief: AI should never replace the creative—it should be a tool to allow the artist to express themselves freely. We combine cutting-edge AI technology with time-tested acting techniques to create a comprehensive learning platform.
+                Scriptly was born from a simple belief: AI should never replace the creative - it should help the artist express themselves more freely. We combine modern AI technology with time-tested acting techniques so actors can rehearse scripts, run lines, and prepare for auditions with clarity.
               </p>
               <p className="animate-on-scroll text-responsive-sm text-muted-foreground leading-relaxed">
-                Our goal is to democratize acting education and help performers at every level reach their full potential.
+                Our goal is to democratize acting education and help performers at every level build a reliable rehearsal workflow.
               </p>
             </div>
             <div className="relative animate-slide-right">
@@ -118,7 +118,7 @@ const About = () => {
             </span>
           </h2>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Be part of the future of acting education. Get access to Scriptly and start your journey today.
+            Be part of the future of acting education. Start rehearsing scripts with your AI audition partner today.
           </p>
           <div className="animate-scale">
             <DownloadCTA location="about" showIcon={false} />
@@ -162,6 +162,18 @@ const About = () => {
               © 2025 Scriptly. All rights reserved. Available in the iOS App Store.
             </div>
             <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
+              <Link
+                to="/"
+                className="text-purple-300 hover:text-purple-100 underline transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                to="/faq"
+                className="text-purple-300 hover:text-purple-100 underline transition-colors"
+              >
+                FAQ
+              </Link>
               <Link 
                 to="/privacy-policy" 
                 className="text-purple-300 hover:text-purple-100 underline transition-colors"

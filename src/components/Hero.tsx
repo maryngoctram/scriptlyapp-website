@@ -39,8 +39,8 @@ const Hero = () => {
 
         {/* Subtitle */}
         <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed mt-4 sm:mt-6">
-          The ultimate mobile app for actors. Practice scenes, perfect your timing, 
-          and elevate your performances with AI-powered coaching.
+          The AI-powered app for actors to rehearse scripts and memorize lines with confidence
+          for performances and auditions.
         </p>
 
         {/* Hero Image */}
@@ -48,7 +48,7 @@ const Hero = () => {
           <div className="absolute inset-0 gradient-spotlight opacity-20 blur-3xl rounded-full"></div>
           <img
             src="/Sample_Script_iPhone.png"
-            alt="Scriptly mobile interface"
+            alt="Scriptly acting rehearsal app for script practice and audition prep"
             className="animate-float relative mx-auto w-full max-w-[150px] sm:max-w-[200px] md:max-w-[250px] lg:max-w-[300px] glass-card-hover rounded-2xl sm:rounded-3xl shadow-dramatic"
             loading="eager"
             decoding="async"

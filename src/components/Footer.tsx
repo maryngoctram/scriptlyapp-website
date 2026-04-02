@@ -16,8 +16,7 @@ const Footer = () => {
             </span>
           </h2>
           <p className="text-responsive-sm text-purple-200 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Be among the first to experience the future of acting training. 
-            Get the Scriptly app in the App Store today.
+            Be among the first to experience AI-powered acting rehearsal. Use Scriptly to prepare for auditions.
           </p>
           <DownloadCTA location="footer" icon={<Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />} />
         </div>
@@ -27,6 +26,7 @@ const Footer = () => {
             <div className="text-center sm:text-left">
               <h3 className="text-xl sm:text-2xl font-bold mb-2 text-purple-100">Scriptly</h3>
               <p className="text-sm sm:text-base text-purple-200">Master your craft. Anytime, anywhere.</p>
+              <p className="text-xs sm:text-sm text-purple-300 mt-1">Your AI audition partner and script reader for actors.</p>
             </div>
 
             <div className="flex gap-3 sm:gap-4">
@@ -58,6 +58,18 @@ const Footer = () => {
               © 2025 Scriptly. All rights reserved. Available in the iOS App Store.
             </div>
             <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
+              <Link 
+                to="/about"
+                className="text-purple-300 hover:text-purple-100 underline transition-colors"
+              >
+                About Scriptly
+              </Link>
+              <Link
+                to="/faq"
+                className="text-purple-300 hover:text-purple-100 underline transition-colors"
+              >
+                Acting FAQ
+              </Link>
               <Link 
                 to="/privacy-policy" 
                 className="text-purple-300 hover:text-purple-100 underline transition-colors"

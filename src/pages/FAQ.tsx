@@ -18,15 +18,15 @@ const FAQ = () => {
   const faqs = [
     {
       question: "What is Scriptly and how does it work?",
-      answer: "Scriptly is the ultimate mobile app designed to help actors rehearse smarter and perform better. Powered by AI, it transforms the way you practice scripts—whether you're preparing for auditions, working on a role, or sharpening your craft.\n\nAll you need to do is upload your script (with any file type) on the app, wait for it to process, and you're ready to start using the AI-empowered features to help you begin rehearsing.\n\nInstead of juggling paper scripts or struggling to find rehearsal partners, Scriptly gives actors a smart, portable rehearsal companion—available anytime, anywhere."
+      answer: "Scriptly is a mobile app that helps actors rehearse scripts, run lines, and prepare for auditions with AI-powered coaching. Whether you're building a role or sharpening your craft, Scriptly gives you a focused rehearsal workflow.\n\nUpload your script in the app, let Scriptly process it, and start rehearsing with tools that support pacing, script reading, and performance analysis.\n\nInstead of juggling paper scripts or waiting on rehearsal partners, you get a smart rehearsal companion available anytime, anywhere."
     },
     {
       question: "Is Scriptly suitable for beginners?",
-      answer: "Absolutely! Scriptly is designed for actors at all levels, from complete beginners to seasoned professionals. The app includes beginner-friendly tutorials, progressive difficulty levels, and personalized learning paths that adapt to your skill level and goals."
+      answer: "Absolutely. Scriptly is designed for actors at all levels, from beginners to seasoned professionals. The app helps you practice scripts at your own pace, run lines repeatedly, and build confidence with guided AI support."
     },
     {
       question: "How does your AI Insights tool work?",
-      answer: "The AI Insights tool acts like a smart coach built into the app. They analyze your scenes and characters to help you understand the background and context of your script. Instead of just running lines, you also get emotion-based, contextual feedback that helps you sharpen your performance and bring more depth to your character."
+      answer: "AI Insights works like a smart acting coach inside the app. It analyzes your scenes and characters so you understand script context, objectives, and emotional beats. Instead of only running lines, you get contextual feedback that helps you make stronger acting choices for auditions and performance."
     },
     {
       question: "What devices will Scriptly support?",
@@ -37,8 +37,8 @@ const FAQ = () => {
       answer: "Scriptly will offer an initial 7-day free trial. The pricing model for the app will be a monthly subscription of $14.99/month paid in the app store."
     },
     {
-      question: "Can I use Scriptly offline?",
-      answer: "After the first rehearsal, many features of Scriptly will work offline, including script reading and basic practice tools. However, AI feedback, script downloads, and progress synchronization require an internet connection. We're working to maximize offline functionality."
+      question: "Can Scriptly help me memorize my lines?",
+      answer: "Scriptly is built to help you memorize lines through repeated rehearsal, script reading, and pacing tools. Many actors use it to lock in scenes faster by practicing consistently. AI feedback and syncing features still require an internet connection."
     }
   ];
 
@@ -108,7 +108,7 @@ const FAQ = () => {
             </span>
           </h1>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            Explore helpful guides and answers to get the most out of Scriptly and elevate your acting craft.
+            Explore helpful guides and answers to get the most out of Scriptly.
           </p>
         </div>
       </section>
@@ -121,7 +121,7 @@ const FAQ = () => {
               App User Guide
             </h2>
             <p className="animate-on-scroll text-responsive-sm text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Use these guided sections to add screenshots and step-by-step instructions that help users navigate Scriptly with confidence.
+              Use these guided sections for step-by-step help so actors can navigate Scriptly and rehearse with confidence.
             </p>
           </div>
 
@@ -258,7 +258,7 @@ const FAQ = () => {
             </span>
           </h2>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of actors who are already preparing for success with Scriptly.
+            Join actors already using Scriptly to enhance their rehearsals.
           </p>
           <div className="animate-scale">
             <DownloadCTA location="faq" showIcon={false} />
@@ -302,6 +302,18 @@ const FAQ = () => {
               © 2025 Scriptly. All rights reserved. Available in the iOS App Store.
             </div>
             <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
+              <Link
+                to="/"
+                className="text-purple-300 hover:text-purple-100 underline transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="text-purple-300 hover:text-purple-100 underline transition-colors"
+              >
+                About
+              </Link>
               <Link 
                 to="/privacy-policy" 
                 className="text-purple-300 hover:text-purple-100 underline transition-colors"

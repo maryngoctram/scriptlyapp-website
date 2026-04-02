@@ -5,7 +5,7 @@ const features = [
   {
     icon: FileText,
     title: "Rehearsal",
-    description: "Rehearse your scenes with interactive line playback and pacing controls designed to mimic a real acting partner."
+    description: "Rehearse and memorize lines with AI feedback."
   },
   {
     icon: Sparkles,
@@ -15,12 +15,12 @@ const features = [
   {
     icon: Users,
     title: "Scene Analysis",
-    description: "Break down each scene with smart insights into pacing, emotion, objectives, and key dramatic beats."
+    description: "Break down each scene with smart insights into pacing, emotion, objectives, and key dramatic beats for stronger auditions."
   },
   {
     icon: NotebookPen,
     title: "Character Analysis",
-    description: "Explore your character's motivations, relationships, and emotional arc to build a deeper, more authentic performance."
+    description: "Explore your character's motivations, relationships, and emotional arc to build a deeper, more authentic performance as an actor."
   }
 ];
 
@@ -36,7 +36,7 @@ const Features = () => {
             </span>
           </h2>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive tools designed by acting professionals to help you master every aspect of your craft.
+            Comprehensive AI tools designed by an acting professional to help you rehearse.
           </p>
         </div>
 

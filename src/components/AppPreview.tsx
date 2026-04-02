@@ -21,8 +21,7 @@ const AppPreview = () => {
               </span>
             </h2>
             <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-              Join dozens of actors who are already using Scriptly to sharpen their skills, 
-              land more roles, and build confidence in their performances.
+              Join the dozens of actors already using Scriptly to run lines and build confidence before auditions.
             </p>
 
             {/* Stats */}
@@ -49,7 +48,7 @@ const AppPreview = () => {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-purple-100 mb-3 sm:mb-4">Scriptly</h3>
               <p className="text-sm sm:text-base text-purple-200 mb-4 sm:mb-6">
-                "This app has transformed my audition preparation. The AI feedback is incredibly insightful!"
+                "This app has transformed my audition preparation. It helps me memorize my lines faster, and the AI feedback is incredibly insightful."
               </p>
               <div className="flex items-center justify-center gap-1 mb-3 sm:mb-4">
                 {[...Array(5)].map((_, i) => (
