@@ -80,7 +80,7 @@ const Support = () => {
             </span>
           </h1>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            Explore helpful guides and answers to get the most out of Scriptly.
+            Explore helpful guides to get the most out of Scriptly.
           </p>
         </div>
       </section>
