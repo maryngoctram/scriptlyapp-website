@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import Home from "./pages/Index";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
+import Support from "./pages/Support";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Feedback from "./pages/Feedback";
@@ -38,6 +39,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/support" element={<Support />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
