@@ -76,7 +76,7 @@ const Support = () => {
           <h1 className="animate-on-scroll text-responsive-xl font-bold mb-4 sm:mb-6 text-foreground">
             Scriptly
             <span className="block text-scriptly-animated">
-              Help Center
+              Support Center
             </span>
           </h1>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
