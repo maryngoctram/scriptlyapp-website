@@ -16,7 +16,7 @@ const Footer = () => {
             </span>
           </h2>
           <p className="text-responsive-sm text-purple-200 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Be among the first to experience AI-powered acting rehearsal. Use Scriptly to prepare for auditions.
+            Download the app now to experience AI-powered acting rehearsals. Use Scriptly to prepare for auditions.
           </p>
           <DownloadCTA location="footer" icon={<Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />} />
         </div>
