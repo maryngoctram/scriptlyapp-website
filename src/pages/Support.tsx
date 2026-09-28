@@ -74,9 +74,9 @@ const Support = () => {
       <section className="section-padding gradient-hero">
         <div className="container-responsive text-center">
           <h1 className="animate-on-scroll text-responsive-xl font-bold mb-4 sm:mb-6 text-foreground">
-            The Scriptly Help
+            Scriptly
             <span className="block text-scriptly-animated">
-              Center
+              Help Center
             </span>
           </h1>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
