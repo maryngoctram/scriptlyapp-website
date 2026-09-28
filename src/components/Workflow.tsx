@@ -33,7 +33,7 @@ const Workflow = () => {
             </span>
           </h2>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground max-w-2xl mx-auto">
-            Transform any script into a personalized rehearsal flow for actors in three simple steps.
+            Transform any script into a personalized rehearsal flow for actors.
           </p>
         </div>
 
