@@ -121,7 +121,7 @@ const About = () => {
             Be part of the future of acting education. Start rehearsing scripts with your AI audition partner today.
           </p>
           <div className="animate-scale">
-            <DownloadCTA location="about" showIcon={false} />
+            <DownloadCTA location="about" />
           </div>
         </div>
       </section>

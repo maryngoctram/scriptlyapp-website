@@ -209,7 +209,7 @@ const Support = () => {
             Join actors already using Scriptly to enhance their rehearsals.
           </p>
           <div className="animate-scale">
-            <DownloadCTA location="support" showIcon={false} />
+            <DownloadCTA location="support" />
           </div>
         </div>
       </section>

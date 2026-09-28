@@ -125,7 +125,7 @@ const FAQ = () => {
             Join actors already using Scriptly to enhance their rehearsals.
           </p>
           <div className="animate-scale">
-            <DownloadCTA location="faq" showIcon={false} />
+            <DownloadCTA location="faq" />
           </div>
         </div>
       </section>

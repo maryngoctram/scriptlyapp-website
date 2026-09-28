@@ -8,16 +8,12 @@ const APP_STORE_URL =
 interface DownloadCTAProps {
   location: string;
   compact?: boolean;
-  icon?: React.ReactNode;
-  showIcon?: boolean;
   className?: string;
 }
 
 export default function DownloadCTA({
   location,
   compact = false,
-  icon,
-  showIcon = true,
   className,
 }: DownloadCTAProps) {
   return (
@@ -31,7 +27,7 @@ export default function DownloadCTA({
         className
       )}
     >
-      {showIcon && (icon ?? <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />)}
+      <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
       {compact ? (
         <>
           <span className="hidden lg:inline">Download the App</span>
