@@ -14,7 +14,7 @@ const AppPreview = () => {
       <div className="container-responsive">
         <div className="grid lg:grid-cols-2 gap-mobile items-center">
           {/* Left Content */}
-          <div className="order-2 lg:order-1 animate-slide-left">
+          <div className="order-1 animate-slide-left">
             <h2 className="animate-on-scroll text-responsive-lg font-bold mb-4 sm:mb-6 text-foreground">
               Trusted by
               <span className="block text-scriptly-animated">
@@ -41,7 +41,7 @@ const AppPreview = () => {
           </div>
 
           {/* Right Content - App Mockup */}
-          <div className="relative order-1 lg:order-2 animate-slide-right">
+          <div className="relative order-2 animate-slide-right">
             <div className="absolute inset-0 gradient-spotlight opacity-20 blur-3xl rounded-full"></div>
             <Card className="animate-scale relative p-6 sm:p-8 bg-gradient-to-r from-purple-600/10 to-purple-500/10 backdrop-blur-xl border border-purple-400/20 text-center rounded-xl shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300">
               <div className="animate-float w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-purple-600 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-purple-500/30">
