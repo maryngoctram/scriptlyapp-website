@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Smartphone, Star, Users, Clock } from "lucide-react";
 
 const stats = [
-  { icon: Users, value: "50+", label: "Active Monthly Users" },
+  { icon: Users, value: "50+", label: "Monthly Active Users" },
   { icon: Clock, value: "50K+", label: "Hours Practiced" }
 ];
 
