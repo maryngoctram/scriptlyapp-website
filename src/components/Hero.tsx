@@ -72,11 +72,11 @@ const Hero = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="animate-on-scroll flex flex-col sm:flex-row gap-4 justify-center">
-          <DownloadCTA location="hero" />
+        <div className="animate-on-scroll flex flex-row gap-3 sm:gap-4 justify-center">
+          <DownloadCTA location="hero" className="whitespace-nowrap px-3 max-[359px]:px-2 max-[359px]:text-xs" />
           <Button
             onClick={() => { trackWatchDemo(); setDemoOpen(true); }}
-            className="cta-bounce bg-gradient-to-r from-purple-600/20 to-blue-600/20 hover:from-purple-600/30 hover:to-blue-600/30 text-purple-100 font-medium px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl backdrop-blur-xl border border-purple-400/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 h-auto"
+            className="cta-bounce bg-gradient-to-r from-purple-600/20 to-blue-600/20 hover:from-purple-600/30 hover:to-blue-600/30 text-purple-100 font-medium whitespace-nowrap px-3 max-[359px]:px-2 max-[359px]:text-xs py-2 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl backdrop-blur-xl border border-purple-400/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 h-auto"
           >
             <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
             Watch Demo

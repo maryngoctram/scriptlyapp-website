@@ -1,5 +1,6 @@
 import { Download } from "lucide-react";
 import { trackDownloadApp } from "@/utils/analytics";
+import { cn } from "@/lib/utils";
 
 const APP_STORE_URL =
   "https://apps.apple.com/us/app/scriptly-ai-acting-rehearsal/id6754227999";
@@ -9,6 +10,7 @@ interface DownloadCTAProps {
   compact?: boolean;
   icon?: React.ReactNode;
   showIcon?: boolean;
+  className?: string;
 }
 
 export default function DownloadCTA({
@@ -16,6 +18,7 @@ export default function DownloadCTA({
   compact = false,
   icon,
   showIcon = true,
+  className,
 }: DownloadCTAProps) {
   return (
     <a
@@ -23,7 +26,10 @@ export default function DownloadCTA({
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => trackDownloadApp(location)}
-      className="cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30 inline-flex items-center justify-center h-auto"
+      className={cn(
+        "cta-bounce bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 border border-purple-400/30 inline-flex items-center justify-center h-auto",
+        className
+      )}
     >
       {showIcon && (icon ?? <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />)}
       {compact ? (
