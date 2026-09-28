@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Smartphone, Star, Users, Clock } from "lucide-react";
 
 const stats = [
-  { icon: Users, value: "20+", label: "Beta Users" },
+  { icon: Users, value: "50+", label: "Active Monthly Users" },
   { icon: Clock, value: "50K+", label: "Hours Practiced" }
 ];
 
@@ -21,7 +21,7 @@ const AppPreview = () => {
               </span>
             </h2>
             <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-              Join the dozens of actors already using Scriptly to run lines and build confidence before auditions.
+              Join the hundreds of actors already using Scriptly to run lines and build confidence before auditions.
             </p>
 
             {/* Stats */}
