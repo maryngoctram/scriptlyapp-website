@@ -25,8 +25,11 @@ const About = () => {
               Scriptly
             </span>
           </h1>
-          <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            We're passionate about helping actors rehearse smarter with AI-powered tools.
+          <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl md:max-w-3xl mx-auto leading-relaxed">
+            {/* Wide phones break before "with"; narrower phones keep the phrase together so "AI-" never splits from "powered" */}
+            We're passionate about helping actors rehearse smarter{" "}
+            <br className="hidden min-[410px]:inline sm:hidden" />
+            <span className="whitespace-nowrap">with AI-powered tools.</span>
           </p>
         </div>
       </section>
