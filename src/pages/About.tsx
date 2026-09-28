@@ -118,7 +118,7 @@ const About = () => {
             </span>
           </h2>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Be part of the future of acting education. Start rehearsing scripts with your AI audition partner today.
+            Be a part of the future of acting education. Start rehearsing scripts with your AI audition partner today.
           </p>
           <div className="animate-scale">
             <DownloadCTA location="about" />
