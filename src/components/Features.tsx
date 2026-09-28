@@ -36,7 +36,7 @@ const Features = () => {
             </span>
           </h2>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive AI tools designed by an acting professional to help you rehearse.
+            Comprehensive rehearsal tools designed by an acting professional.
           </p>
         </div>
 
