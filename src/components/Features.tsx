@@ -45,14 +45,14 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-4xl md:max-w-3xl mx-auto">
           {features.map((feature, index) => (
-            <Card key={index} className={`p-3 sm:p-6 md:p-8 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-lg sm:rounded-xl shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 hover:scale-105 ${index === 0 ? "col-span-2 col-start-2" : "col-span-2"} ${index % 2 === 0 ? 'animate-slide-left' : 'animate-slide-right'}`}>
-              <div className="animate-float-mobile sm:animate-float w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mb-2 sm:mb-4 md:mb-6 shadow-lg shadow-purple-500/30">
-                <feature.icon className="w-4 h-4 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
+            <Card key={index} className={`p-3 sm:p-6 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-lg sm:rounded-xl shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 hover:scale-105 ${index === 0 ? "col-span-2 col-start-2" : "col-span-2"} ${index % 2 === 0 ? 'animate-slide-left' : 'animate-slide-right'}`}>
+              <div className="animate-float-mobile sm:animate-float w-8 h-8 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mb-2 sm:mb-4 shadow-lg shadow-purple-500/30">
+                <feature.icon className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
               </div>
-              <h3 className="text-sm sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 md:mb-4 text-purple-100 leading-tight">{feature.title}</h3>
-              <p className="text-xs sm:text-sm md:text-base text-purple-200 leading-tight sm:leading-relaxed">{feature.description}</p>
+              <h3 className="text-sm sm:text-lg font-semibold mb-2 sm:mb-3 text-purple-100 leading-tight">{feature.title}</h3>
+              <p className="text-xs sm:text-sm text-purple-200 leading-tight sm:leading-relaxed">{feature.description}</p>
             </Card>
           ))}
         </div>
