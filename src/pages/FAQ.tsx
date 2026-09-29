@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { HelpCircle, Mail, Instagram } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import DownloadCTA from "@/components/DownloadCTA";
+import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 import TikTokIcon from "@/components/icons/TikTokIcon";
 
 const FAQ = () => {
@@ -42,162 +42,27 @@ const FAQ = () => {
     }
   ];
 
-  const userGuideSections = [
-    {
-      title: "Accessing the Rehearsal Mode Menu",
-      description: "To open additional settings and controls while rehearsing:",
-      imageSrc: "/app-user-guide-getting-started.png",
-      steps: [
-        "Go to Rehearsal Mode in the Scriptly app.",
-        "Look at the top-right corner of the screen.",
-        "Tap the three dots (•••) icon.",
-        "The Rehearsal Menu will slide open with more options.",
-      ],
-      actionTitle: "What You Can Do in This Menu",
-      actions: [
-        "Change Your Role",
-        "Voice Selection",
-        "Range Selection",
-        "Edit Mode",
-        "Hide Stage Directions",
-        "Auto-Loop",
-      ],
-      imageLabel: "Onboarding screen screenshot",
-    },
-    {
-      title: "Scene Analysis",
-      description: "Break down your scene to improve your performance.",
-      imageSrc: "/app-user-guide-uploading-scripts.png",
-      steps: [
-        "Summary \u2013 Quick overview of the scene",
-        "Key Details \u2013 Characters and setting",
-        "Stakes \u2013 What\u2019s at risk for your character",
-        "Reflections \u2013 Prompts to explore deeper meaning",
-        "Director\u2019s Notes \u2013 Add your own insights",
-      ],
-      actionTitle: "",
-      actions: [],
-      footnote: "Tap a card to expand, use (+) to add notes, and (\u2022\u2022\u2022) for more options.",
-      imageLabel: "Scene Analysis screenshot",
-    },
-    {
-      title: "Character Analysis",
-      description: "Dive deeper into your character to strengthen your performance.",
-      imageSrc: "/app-user-guide-practice-tools.png",
-      steps: [
-        "Switch between characters using the tabs at the top",
-        "Explore sections like Basic Facts, Motivations, Backstory, and Character Arc",
-        "Tap a section to expand and read more or edit details",
-        "Use the (+) button to add new insights",
-        "Tap (\u2022\u2022\u2022) for additional options",
-      ],
-      footnote: "",
-      imageLabel: "Character Analysis screenshot",
-    },
-  ];
-
   return (
     <div className="pt-16 sm:pt-20">
       {/* Hero Section */}
       <section className="section-padding gradient-hero">
         <div className="container-responsive text-center">
           <h1 className="animate-on-scroll text-responsive-xl font-bold mb-4 sm:mb-6 text-foreground">
-            The Scriptly Help
+            Frequently Asked
             <span className="block text-scriptly-animated">
-              Center
+              Questions
             </span>
           </h1>
-          <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            Explore helpful guides and answers to get the most out of Scriptly.
+          <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl md:max-w-3xl mx-auto leading-relaxed">
+            Quick answers about Scriptly, pricing, devices, and how the app helps{" "}
+            <span className="whitespace-nowrap">you rehearse.</span>
           </p>
-        </div>
-      </section>
-
-      {/* App User Guide Section */}
-      <section className="section-padding bg-background">
-        <div className="container-responsive max-w-6xl">
-          <div className="text-center mb-10 sm:mb-14">
-            <h2 className="animate-on-scroll text-responsive-lg font-bold text-foreground mb-4">
-              App User Guide
-            </h2>
-            <p className="animate-on-scroll text-responsive-sm text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Use these guided sections for step-by-step help so actors can navigate Scriptly and rehearse with confidence.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {userGuideSections.map((section, index) => (
-              <Card
-                key={section.title}
-                className={`p-5 sm:p-6 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-xl shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 ${index % 2 === 0 ? "animate-slide-left" : "animate-slide-right"}`}
-              >
-                <div className="mb-5">
-                  {section.imageSrc ? (
-                    <img
-                      src={section.imageSrc}
-                      alt={section.imageLabel}
-                      className="w-full aspect-[9/16] rounded-none object-contain bg-background/40"
-                    />
-                  ) : (
-                    <div className="w-full aspect-[9/16] rounded-lg border border-dashed border-purple-400/40 bg-background/40 flex items-center justify-center text-center px-4">
-                      <span className="text-sm text-purple-200">
-                        Add image: {section.imageLabel}
-                      </span>
-                    </div>
-                  )}
-                </div>
-
-                <h3 className="text-lg font-semibold text-purple-100 mb-2">
-                  {section.title}
-                </h3>
-                <p className="text-sm text-purple-200 mb-4 leading-relaxed">
-                  {section.description}
-                </p>
-
-                {"footnote" in section && section.footnote ? (
-                  <ul className="space-y-2 text-sm text-purple-100 list-disc list-inside">
-                    {section.steps.map((step) => (
-                      <li key={step}>{step}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  <ol className="space-y-2 text-sm text-purple-100 list-decimal list-inside">
-                    {section.steps.map((step) => (
-                      <li key={step}>{step}</li>
-                    ))}
-                  </ol>
-                )}
-
-                {"actionTitle" in section && section.actionTitle && section.actions?.length ? (
-                  <div className="mt-5">
-                    <h4 className="text-sm sm:text-base font-semibold text-purple-100 mb-2">
-                      {section.actionTitle}
-                    </h4>
-                    <ul className="space-y-2 text-sm text-purple-200 list-disc list-inside">
-                      {section.actions.map((action) => (
-                        <li key={action}>{action}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
-
-                {"footnote" in section && section.footnote ? (
-                  <p className="mt-4 text-sm text-purple-200 italic leading-relaxed">
-                    {section.footnote}
-                  </p>
-                ) : null}
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="section-padding bg-gradient-to-r from-purple-600/5 to-blue-600/5">
         <div className="container-responsive max-w-4xl">
-          <h2 className="text-responsive-lg font-bold mb-8 text-foreground text-center">
-            Frequently Asked Questions
-          </h2>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className={`bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-xl px-4 sm:px-6 shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 ${index % 2 === 0 ? 'animate-slide-left' : 'animate-slide-right'}`}>
@@ -252,17 +117,18 @@ const FAQ = () => {
       <section className="py-20 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="animate-on-scroll text-responsive-lg font-bold mb-4 sm:mb-6 text-foreground">
-            Ready to Start Your
+            Your Next Great Performance
             <span className="block text-scriptly-animated">
-              Acting Journey?
+              Starts Here.
             </span>
           </h2>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join actors already using Scriptly to enhance their rehearsals.
+            Learn your lines, explore your character, and rehearse with confidence—all in one app.
           </p>
           <div className="animate-scale">
-            <DownloadCTA location="faq" showIcon={false} />
+            <DownloadCTA location="faq" />
           </div>
+          <DownloadTagline />
         </div>
       </section>
 

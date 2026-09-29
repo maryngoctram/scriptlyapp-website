@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Users, Target, Award, Heart, Instagram } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import DownloadCTA from "@/components/DownloadCTA";
+import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 import TikTokIcon from "@/components/icons/TikTokIcon";
 
 const About = () => {
@@ -25,8 +25,11 @@ const About = () => {
               Scriptly
             </span>
           </h1>
-          <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            We're passionate about helping actors rehearse smarter with AI-powered tools.
+          <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl md:max-w-3xl mx-auto leading-relaxed">
+            {/* Wide phones break before "with"; narrower phones keep the phrase together so "AI-" never splits from "powered" */}
+            We're passionate about helping actors rehearse smarter{" "}
+            <br className="hidden min-[410px]:inline sm:hidden" />
+            <span className="whitespace-nowrap">with AI-powered tools.</span>
           </p>
         </div>
       </section>
@@ -118,11 +121,12 @@ const About = () => {
             </span>
           </h2>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Be part of the future of acting education. Start rehearsing scripts with your AI audition partner today.
+            Be a part of the future of acting education. Start rehearsing scripts with your AI audition partner today.
           </p>
           <div className="animate-scale">
-            <DownloadCTA location="about" showIcon={false} />
+            <DownloadCTA location="about" />
           </div>
+          <DownloadTagline />
         </div>
       </section>
 

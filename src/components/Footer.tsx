@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import DownloadCTA from "@/components/DownloadCTA";
+import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 import TikTokIcon from "@/components/icons/TikTokIcon";
 
 const Footer = () => {
@@ -16,9 +16,10 @@ const Footer = () => {
             </span>
           </h2>
           <p className="text-responsive-sm text-purple-200 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Be among the first to experience AI-powered acting rehearsal. Use Scriptly to prepare for auditions.
+            Download the app now to experience AI-powered acting rehearsals. Use Scriptly to prepare for auditions.
           </p>
-          <DownloadCTA location="footer" icon={<Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />} />
+          <DownloadCTA location="footer" />
+          <DownloadTagline />
         </div>
 
         <div className="border-t border-purple-400/20 pt-6 sm:pt-8">

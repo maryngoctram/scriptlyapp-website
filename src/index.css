@@ -157,6 +157,14 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  /* Slide-in animations start 50px off to the side; clip each section so the page never scrolls sideways on phones */
+  html,
+  body,
+  section,
+  footer {
+    overflow-x: clip;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -374,6 +382,17 @@ All colors MUST be HSL.
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: subtitle-color-shift 6s ease-in-out infinite;
+  }
+
+  /* Gradient text is only painted inside its box, which clips descenders (g, y, p).
+     Extend the painted area downward and cancel it with a negative margin so spacing is unchanged. */
+  .gradient-welcome,
+  .text-gradient-primary,
+  .text-glassmorphic-logo,
+  .text-scriptly-animated,
+  .text-subtitle-animated {
+    padding-bottom: 0.15em;
+    margin-bottom: -0.15em;
   }
   
   @keyframes scriptly-color-shift {
