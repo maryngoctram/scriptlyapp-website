@@ -157,6 +157,14 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  /* Slide-in animations start 50px off to the side; clip each section so the page never scrolls sideways on phones */
+  html,
+  body,
+  section,
+  footer {
+    overflow-x: clip;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
