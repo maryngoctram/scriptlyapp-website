@@ -30,11 +30,11 @@ export default function DownloadCTA({
       <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
       {compact ? (
         <>
-          <span className="hidden lg:inline">Download the App</span>
+          <span className="hidden lg:inline">Download Scriptly</span>
           <span className="lg:hidden">Download</span>
         </>
       ) : (
-        "Download the App"
+        "Download Scriptly"
       )}
     </a>
   );
