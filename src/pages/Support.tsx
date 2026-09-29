@@ -313,7 +313,7 @@ const Support = () => {
       <section className="py-20 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="animate-on-scroll text-responsive-lg font-bold mb-4 sm:mb-6 text-foreground">
-            Ready to Start Your
+            Ready to Enhance Your
             <span className="block text-scriptly-animated">
               Acting Journey?
             </span>
