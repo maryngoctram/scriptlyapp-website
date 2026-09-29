@@ -116,13 +116,13 @@ const FAQ = () => {
       <section className="py-20 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="animate-on-scroll text-responsive-lg font-bold mb-4 sm:mb-6 text-foreground">
-            Ready to Start Your
+            Your Next Great Performance
             <span className="block text-scriptly-animated">
-              Acting Journey?
+              Starts Here.
             </span>
           </h2>
           <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join actors already using Scriptly to enhance their rehearsals.
+            Learn your lines, explore your character, and rehearse with confidence—all in one app.
           </p>
           <div className="animate-scale">
             <DownloadCTA location="faq" />
