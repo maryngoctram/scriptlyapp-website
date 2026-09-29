@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, Instagram } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import DownloadCTA from "@/components/DownloadCTA";
+import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 import TikTokIcon from "@/components/icons/TikTokIcon";
 
 const Support = () => {
@@ -324,6 +324,7 @@ const Support = () => {
           <div className="animate-scale">
             <DownloadCTA location="support" />
           </div>
+          <DownloadTagline />
         </div>
       </section>
 

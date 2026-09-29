@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
-import DownloadCTA from "@/components/DownloadCTA";
+import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 import TikTokIcon from "@/components/icons/TikTokIcon";
 
 const Footer = () => {
@@ -19,6 +19,7 @@ const Footer = () => {
             Download the app now to experience AI-powered acting rehearsals. Use Scriptly to prepare for auditions.
           </p>
           <DownloadCTA location="footer" />
+          <DownloadTagline />
         </div>
 
         <div className="border-t border-purple-400/20 pt-6 sm:pt-8">

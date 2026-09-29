@@ -39,3 +39,12 @@ export default function DownloadCTA({
     </a>
   );
 }
+
+/** Small line shown under the Download button in each page's closing section. */
+export function DownloadTagline() {
+  return (
+    <p className="mt-4 text-xs sm:text-sm text-muted-foreground">
+      Your AI-powered rehearsal companion.
+    </p>
+  );
+}

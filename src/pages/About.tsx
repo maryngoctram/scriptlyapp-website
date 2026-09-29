@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Users, Target, Award, Heart, Instagram } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import DownloadCTA from "@/components/DownloadCTA";
+import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 import TikTokIcon from "@/components/icons/TikTokIcon";
 
 const About = () => {
@@ -126,6 +126,7 @@ const About = () => {
           <div className="animate-scale">
             <DownloadCTA location="about" />
           </div>
+          <DownloadTagline />
         </div>
       </section>
 

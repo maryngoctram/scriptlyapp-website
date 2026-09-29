@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { HelpCircle, Mail, Instagram } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import DownloadCTA from "@/components/DownloadCTA";
+import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 import TikTokIcon from "@/components/icons/TikTokIcon";
 
 const FAQ = () => {
@@ -127,6 +127,7 @@ const FAQ = () => {
           <div className="animate-scale">
             <DownloadCTA location="faq" />
           </div>
+          <DownloadTagline />
         </div>
       </section>
 
