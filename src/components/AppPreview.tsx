@@ -1,11 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Smartphone, Star, Users, UserPlus, Clock } from "lucide-react";
+import { Smartphone, Star, Users, UserPlus } from "lucide-react";
 
 const stats = [
   { icon: UserPlus, value: "10+", label: "New Users Daily" },
-  { icon: Users, value: "50+", label: "Monthly Active Users" },
-  { icon: Clock, value: "50K+", label: "Hours Practiced" }
+  { icon: Users, value: "50+", label: "Monthly Active Users" }
 ];
 
 const AppPreview = () => {
@@ -26,7 +25,7 @@ const AppPreview = () => {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center animate-on-scroll">
                   <div className="animate-float w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-2 shadow-lg shadow-purple-500/30">
