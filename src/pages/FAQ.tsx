@@ -53,8 +53,9 @@ const FAQ = () => {
               Questions
             </span>
           </h1>
-          <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-            Quick answers about Scriptly, pricing, devices, and how the app helps you rehearse.
+          <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl md:max-w-3xl mx-auto leading-relaxed">
+            Quick answers about Scriptly, pricing, devices, and how the app helps{" "}
+            <span className="whitespace-nowrap">you rehearse.</span>
           </p>
         </div>
       </section>
