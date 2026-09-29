@@ -16,55 +16,129 @@ const Support = () => {
 
   const userGuideSections = [
     {
-      title: "Accessing the Rehearsal Mode Menu",
-      description: "To open additional settings and controls while rehearsing:",
-      imageSrc: "/app-user-guide-getting-started.png",
+      title: "Using the Visuals Tab",
+      description: "Create a mood board to visualize your scene using your own images or AI-generated inspiration.",
+      imageSrc: "/app-user-guide-visuals-tab.jpg",
+      stepsTitle: "Creating Your Mood Board",
       steps: [
-        "Go to Rehearsal Mode in the Scriptly app.",
-        "Look at the top-right corner of the screen.",
-        "Tap the three dots (•••) icon.",
-        "The Rehearsal Menu will slide open with more options.",
+        "Tap Visuals in the bottom navigation bar.",
+        "Select Add your own image to upload an image.",
+        "Or use AI to generate images for your Set, Wardrobe, or Props.",
+        "Arrange your images to bring your scene to life.",
       ],
-      actionTitle: "What You Can Do in This Menu",
+      actionTitle: "Additional Tools & Options",
       actions: [
-        "Change Your Role",
-        "Voice Selection",
-        "Range Selection",
-        "Edit Mode",
-        "Hide Stage Directions",
-        "Auto-Loop",
+        { label: "Script Icon (Top Left):", text: "Access your original script file." },
+        {
+          label: "Three Dots (•••) (Top Right):",
+          text: "Open additional mood board options:",
+          subItems: ["Reset Layout", "Generate Full Board", "Generate Set", "Generate Wardrobe", "Generate Props"],
+        },
       ],
-      imageLabel: "Onboarding screen screenshot",
+      imageLabel: "Visuals tab mood board screenshot",
     },
     {
-      title: "Scene Analysis",
-      description: "Break down your scene to improve your performance.",
-      imageSrc: "/app-user-guide-uploading-scripts.png",
+      title: "Using the Rehearse Tab",
+      description: "Practice your lines with AI-powered scene partners and customize your rehearsal experience.",
+      imageSrc: "/app-user-guide-rehearsal-menu.jpg",
+      stepsTitle: "Rehearsing Your Scene",
       steps: [
-        "Summary \u2013 Quick overview of the scene",
-        "Key Details \u2013 Characters and setting",
-        "Stakes \u2013 What\u2019s at risk for your character",
-        "Reflections \u2013 Prompts to explore deeper meaning",
-        "Director\u2019s Notes \u2013 Add your own insights",
+        "Tap Rehearse in the bottom navigation bar.",
+        "Follow your highlighted lines as you rehearse.",
+        {
+          text: "Use the playback controls to navigate your scene:",
+          subItems: [
+            { label: "Rewind:", text: "Go back to the previous line." },
+            { label: "Play/Pause:", text: "Start or pause your rehearsal." },
+            { label: "Fast-Forward:", text: "Skip to the next line." },
+            { label: "Playback Speed:", text: "Adjust the rehearsal speed." },
+          ],
+        },
       ],
-      actionTitle: "",
-      actions: [],
-      footnote: "Tap a card to expand, use (+) to add notes, and (\u2022\u2022\u2022) for more options.",
-      imageLabel: "Scene Analysis screenshot",
+      actionTitle: "Additional Tools & Options",
+      actions: [
+        { label: "Script Icon (Top Left):", text: "Access your original script file." },
+        { label: "Chat Icon (Top Right):", text: "Add individual notes to specific lines for greater clarity and detail." },
+        {
+          label: "Three Dots (•••) (Top Right):",
+          text: "Open additional rehearsal options:",
+          subItems: ["Change Your Role", "Voice Selection", "Range Selection", "Edit Mode", "Hide Stage Directions", "Auto-Loop"],
+        },
+      ],
+      imageLabel: "Rehearse tab screenshot",
     },
     {
-      title: "Character Analysis",
-      description: "Dive deeper into your character to strengthen your performance.",
-      imageSrc: "/app-user-guide-practice-tools.png",
+      title: "Using the Insights Tab",
+      description: "Explore AI-generated scene and character insights to deepen your understanding of the script and your role.",
+      imageSrc: "/app-user-guide-insights-tab.jpg",
+      stepsTitle: "Exploring Your Insights",
       steps: [
-        "Switch between characters using the tabs at the top",
-        "Explore sections like Basic Facts, Motivations, Backstory, and Character Arc",
-        "Tap a section to expand and read more or edit details",
-        "Use the (+) button to add new insights",
-        "Tap (\u2022\u2022\u2022) for additional options",
+        "Tap Insights in the bottom navigation bar.",
+        "Select Scene or an individual character (e.g., SAM or ROY) to view their insights.",
+        "Tap any insight to expand and read its details.",
+        "Tap the Pencil Icon to manually edit or personalize any insight.",
       ],
-      footnote: "",
-      imageLabel: "Character Analysis screenshot",
+      groupsTitle: "What You'll Find in Insights",
+      groups: [
+        {
+          title: "Scene Insights:",
+          items: ["Summary", "Key Details", "Beats", "Subtext", "Stakes", "Moment Before"],
+        },
+        {
+          title: "Character Insights:",
+          items: ["Basic Facts", "Music", "Motivations", "Backstory", "Character Arc", "Occupation Insight"],
+        },
+      ],
+      actionTitle: "Additional Tools & Options",
+      actions: [
+        { label: "Script Icon (Top Left):", text: "Access your original script file." },
+        {
+          label: "Three Dots (•••) (Top Right):",
+          text: "Open additional insight options:",
+          subItems: ["Refresh Scene Insights", "Refresh Character Insights", "Select to Delete specific insights"],
+        },
+      ],
+      imageLabel: "Insights tab screenshot",
+    },
+    {
+      title: "Using the Chat Tab",
+      description: "Ask Scriptly's AI questions about your scene or character to explore motivations, subtext, and other details that bring your performance to life.",
+      imageSrc: "/app-user-guide-chat-tab.jpg",
+      stepsTitle: "Chatting About Your Scene",
+      steps: [
+        "Tap Chat in the bottom navigation bar.",
+        "Select a suggested question to get started, or type your own in the chat box.",
+        "Tap the Send Arrow to submit your question.",
+        "Continue asking follow-up questions to explore your scene or character in greater detail.",
+      ],
+      actionTitle: "What You Can Ask",
+      actions: [
+        { label: "Character Motivations:", text: "What does my character want in this scene?" },
+        { label: "Subtext:", text: "What is my character not saying out loud?" },
+        { label: "Scene Context:", text: "What happened right before this scene starts?" },
+        { label: "Character Development:", text: "How does my character change throughout the scene?" },
+      ],
+      imageLabel: "Chat tab screenshot",
+    },
+    {
+      title: "Using the Notes Tab",
+      description: "Your personal workspace to jot down ideas, organize your thoughts, and study your scene throughout the rehearsal process.",
+      imageSrc: "/app-user-guide-notes-tab.jpg",
+      stepsTitle: "Taking Notes",
+      steps: [
+        "Tap Notes in the bottom navigation bar.",
+        "Tap anywhere in the workspace to start writing.",
+        "Record your thoughts, observations, or reminders as you prepare for your scene.",
+        "Return to your Notes anytime to review or update them.",
+      ],
+      actionTitle: "What You Can Write",
+      actions: [
+        { label: "Scene Observations:", text: "Important details or discoveries about your scene." },
+        { label: "Character Notes:", text: "Thoughts on motivations, emotions, and character development." },
+        { label: "Rehearsal Reminders:", text: "Acting choices, feedback, or areas to improve." },
+        { label: "Personal Reflections:", text: "Ideas and takeaways from your rehearsal sessions." },
+      ],
+      imageLabel: "Notes tab screenshot",
     },
   ];
 
@@ -97,11 +171,11 @@ const Support = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
             {userGuideSections.map((section, index) => (
               <Card
                 key={section.title}
-                className={`p-5 sm:p-6 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-xl shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 ${index % 2 === 0 ? "animate-slide-left" : "animate-slide-right"}`}
+                className={`lg:col-span-2 ${index === 3 ? "lg:col-start-2" : ""} p-5 sm:p-6 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-xl shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 ${index % 2 === 0 ? "animate-slide-left" : "animate-slide-right"}`}
               >
                 <div className="mb-5">
                   {section.imageSrc ? (
@@ -126,19 +200,50 @@ const Support = () => {
                   {section.description}
                 </p>
 
-                {"footnote" in section && section.footnote ? (
-                  <ul className="space-y-2 text-sm text-purple-100 list-disc list-inside">
-                    {section.steps.map((step) => (
-                      <li key={step}>{step}</li>
-                    ))}
-                  </ul>
-                ) : (
+                {"stepsTitle" in section && section.stepsTitle ? (
+                  <h4 className="text-sm sm:text-base font-semibold text-purple-100 mb-2">
+                    {section.stepsTitle}
+                  </h4>
+                ) : null}
+
+                {section.steps.length === 0 ? null : (
                   <ol className="space-y-2 text-sm text-purple-100 list-decimal list-inside">
-                    {section.steps.map((step) => (
-                      <li key={step}>{step}</li>
-                    ))}
+                    {section.steps.map((step) =>
+                      typeof step === "string" ? (
+                        <li key={step}>{step}</li>
+                      ) : (
+                        <li key={step.text}>
+                          {step.text}
+                          <ul className="mt-2 ml-5 space-y-1 text-purple-200 list-disc list-inside">
+                            {step.subItems.map((item) => (
+                              <li key={item.label}>
+                                <span className="font-semibold text-purple-100">{item.label}</span> {item.text}
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      )
+                    )}
                   </ol>
                 )}
+
+                {"groups" in section && section.groups?.length ? (
+                  <div className="mt-5">
+                    <h4 className="text-sm sm:text-base font-semibold text-purple-100 mb-2">
+                      {section.groupsTitle}
+                    </h4>
+                    {section.groups.map((group) => (
+                      <div key={group.title} className="mt-3">
+                        <p className="text-sm font-semibold text-purple-100 mb-1">{group.title}</p>
+                        <ul className="space-y-1 text-sm text-purple-200 list-disc list-inside">
+                          {group.items.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
 
                 {"actionTitle" in section && section.actionTitle && section.actions?.length ? (
                   <div className="mt-5">
@@ -146,18 +251,26 @@ const Support = () => {
                       {section.actionTitle}
                     </h4>
                     <ul className="space-y-2 text-sm text-purple-200 list-disc list-inside">
-                      {section.actions.map((action) => (
-                        <li key={action}>{action}</li>
-                      ))}
+                      {section.actions.map((action) =>
+                        typeof action === "string" ? (
+                          <li key={action}>{action}</li>
+                        ) : (
+                          <li key={action.label}>
+                            <span className="font-semibold text-purple-100">{action.label}</span> {action.text}
+                            {action.subItems ? (
+                              <ul className="mt-2 ml-5 space-y-1 list-[circle] list-inside">
+                                {action.subItems.map((item) => (
+                                  <li key={item}>{item}</li>
+                                ))}
+                              </ul>
+                            ) : null}
+                          </li>
+                        )
+                      )}
                     </ul>
                   </div>
                 ) : null}
 
-                {"footnote" in section && section.footnote ? (
-                  <p className="mt-4 text-sm text-purple-200 italic leading-relaxed">
-                    {section.footnote}
-                  </p>
-                ) : null}
               </Card>
             ))}
           </div>
