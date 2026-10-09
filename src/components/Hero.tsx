@@ -39,8 +39,9 @@ const Hero = () => {
 
         {/* Subtitle */}
         <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed mt-4 sm:mt-6">
-          The AI-powered app for actors to rehearse scripts and memorize lines with confidence
-          for performances and auditions.
+          More than a line reader. Scriptly helps actors understand the scene,{" "}
+          <span className="whitespace-nowrap">build the character,</span> and rehearse{" "}
+          <span className="whitespace-nowrap">with confidence.</span>
         </p>
 
         {/* Hero Image */}
