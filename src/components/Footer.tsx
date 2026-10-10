@@ -3,6 +3,7 @@ import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 import TikTokIcon from "@/components/icons/TikTokIcon";
+import DiscordLink from "@/components/DiscordLink";
 
 const Footer = () => {
   return (
@@ -51,6 +52,7 @@ const Footer = () => {
                   <TikTokIcon className="w-5 h-5" />
                 </Button>
               </a>
+              <DiscordLink variant="footer" />
             </div>
           </div>
 
