@@ -72,7 +72,6 @@ const Community = () => {
   const [heardFromOther, setHeardFromOther] = useState("");
   const [location, setLocation] = useState("");
   const [notes, setNotes] = useState("");
-  const [updatesOptIn, setUpdatesOptIn] = useState(false);
   const [website, setWebsite] = useState(""); // honeypot, hidden from people
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -115,7 +114,6 @@ const Community = () => {
           heard_about_scriptly: heard,
           city_or_time_zone: location,
           anything_else: notes,
-          wants_scriptly_updates: updatesOptIn ? "Yes" : "No",
           page: window.location.href,
           website,
         }),
@@ -276,12 +274,6 @@ const Community = () => {
                   <Textarea id="notes" rows={3} placeholder="Ideas, events, or topics you'd love the community to cover"
                     value={notes} onChange={(e) => setNotes(e.target.value)} className={`${fieldClass} resize-none`} />
                 </div>
-
-                <label className="flex items-start gap-2 text-sm text-purple-200 cursor-pointer">
-                  <input type="checkbox" checked={updatesOptIn} onChange={(e) => setUpdatesOptIn(e.target.checked)}
-                    className="mt-0.5 h-4 w-4 shrink-0 accent-purple-500" />
-                  Also send me occasional Scriptly news and feature updates.
-                </label>
 
                 <Button
                   type="submit"

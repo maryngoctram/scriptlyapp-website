@@ -27,7 +27,6 @@ const COLUMNS = [
   ["heard_about_scriptly", "Heard about Scriptly from"],
   ["city_or_time_zone", "City / time zone"],
   ["anything_else", "Anything else"],
-  ["wants_scriptly_updates", "Wants Scriptly updates"],
   ["page", "Signed up from"],
 ];
 
