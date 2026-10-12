@@ -118,7 +118,7 @@ const Community = () => {
           website,
         }),
       });
-      trackJoinCommunity(heardFrom);
+      trackJoinCommunity(heardFrom || "Not answered");
       setSubmitted(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch {
@@ -214,23 +214,23 @@ const Community = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="discord" className="text-purple-100">Discord username</Label>
+                  <Label htmlFor="discord" className="text-purple-100">Discord username *</Label>
                   <Input id="discord" placeholder="e.g. actorname" value={discord}
-                    onChange={(e) => setDiscord(e.target.value)} className={fieldClass} />
-                  <p className="text-xs text-muted-foreground">No Discord account yet? Leave this blank. We'll email your invite.</p>
+                    onChange={(e) => setDiscord(e.target.value)} required className={fieldClass} />
+                  <p className="text-xs text-muted-foreground">Don't have one yet? Create a free account at <a href="https://discord.com/register" target="_blank" rel="noopener noreferrer" className="underline">discord.com</a>.</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="role" className="text-purple-100">I'm a… *</Label>
-                    <select id="role" value={role} onChange={(e) => setRole(e.target.value)} required className={selectClass}>
+                    <Label htmlFor="role" className="text-purple-100">I'm a…</Label>
+                    <select id="role" value={role} onChange={(e) => setRole(e.target.value)} className={selectClass}>
                       <option value="" disabled>Select one</option>
                       {ROLES.map((r) => <option key={r} value={r}>{r}</option>)}
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="uses" className="text-purple-100">Do you use Scriptly? *</Label>
-                    <select id="uses" value={usesScriptly} onChange={(e) => setUsesScriptly(e.target.value)} required className={selectClass}>
+                    <Label htmlFor="uses" className="text-purple-100">Do you use Scriptly?</Label>
+                    <select id="uses" value={usesScriptly} onChange={(e) => setUsesScriptly(e.target.value)} className={selectClass}>
                       <option value="" disabled>Select one</option>
                       {SCRIPTLY_USE.map((u) => <option key={u} value={u}>{u}</option>)}
                     </select>
@@ -251,8 +251,8 @@ const Community = () => {
                 </fieldset>
 
                 <div className="space-y-2">
-                  <Label htmlFor="heard" className="text-purple-100">How did you hear about Scriptly? *</Label>
-                  <select id="heard" value={heardFrom} onChange={(e) => setHeardFrom(e.target.value)} required className={selectClass}>
+                  <Label htmlFor="heard" className="text-purple-100">How did you hear about Scriptly?</Label>
+                  <select id="heard" value={heardFrom} onChange={(e) => setHeardFrom(e.target.value)} className={selectClass}>
                     <option value="" disabled>Select one</option>
                     {HEARD_FROM.map((h) => <option key={h} value={h}>{h}</option>)}
                   </select>
