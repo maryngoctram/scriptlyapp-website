@@ -49,7 +49,7 @@ function doPost(e) {
   if (NOTIFY_EMAIL) {
     MailApp.sendEmail(
       NOTIFY_EMAIL,
-      "New Scriptly community signup: " + clean_(p.name),
+      "New Scriptly Discord Community Sign-Up: " + clean_(p.name),
       COLUMNS.slice(1).map(([key, label]) => label + ": " + clean_(p[key])).join("\n")
     );
   }
