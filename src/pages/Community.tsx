@@ -15,7 +15,8 @@ import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 
 // Google Apps Script web app that appends each signup to the Scriptly-owned Google Sheet.
 // Setup steps: docs/community-waitlist-apps-script.gs. Paste the deployed Web app URL here.
-const COMMUNITY_FORM_ENDPOINT = "";
+const COMMUNITY_FORM_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbxXtGQavl0qDeofuAR75YfWEYXSA4ntVA97-N5XpoOWDY1vgg1PXLBOz5YVOiCnRjrJWA/exec";
 
 const ROLES = [
   "Professional actor",
