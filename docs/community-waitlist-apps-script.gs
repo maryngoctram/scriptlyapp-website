@@ -14,7 +14,7 @@
  */
 
 const SHEET_NAME = "Signups";
-const NOTIFY_EMAIL = ""; // e.g. "scriptlyactingapp@gmail.com" to get an email per signup; leave "" to turn off
+const NOTIFY_EMAIL = "scriptlyactingapp@gmail.com"; // email sent for every signup; set to "" to turn off
 
 const COLUMNS = [
   ["submitted_at", "Submitted at"],
