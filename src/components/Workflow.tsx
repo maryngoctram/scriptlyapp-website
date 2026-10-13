@@ -11,14 +11,14 @@ const Workflow = () => {
     {
       image: "/how-step-2-processing.jpg",
       imageAlt: "Scriptly preparing script sections from an uploaded page",
-      title: "AI Personalizes",
-      description: "AI analyzes your dialogue and provides insights for improvement."
+      title: "Scriptly Personalizes",
+      description: "Scriptly analyzes your dialogue and provides insights for improvement."
     },
     {
       image: "/how-step-3-rehearse.jpg",
       imageAlt: "Rehearse mode highlighting the current line",
       title: "Rehearse",
-      description: "Maximize rehearsals with AI, auditory, and visual assistants in the app."
+      description: "Run lines with an AI reader, supported by character and scene insights."
     }
   ];
 
@@ -67,18 +67,18 @@ const Workflow = () => {
           </div>
 
           {/* Mobile Workflow */}
-          <div className="md:hidden flex items-stretch justify-center gap-1 overflow-x-auto pt-6">
+          <div className="md:hidden flex items-stretch justify-center gap-1 pt-6">
             {steps.map((step, index) => (
               <div key={index} className="flex items-stretch">
                 {/* Step Screenshot and Content */}
                 <div className="animate-on-scroll flex flex-col items-center text-center">
                   {/* Step Screenshot */}
-                  <div className="animate-float w-[100px] aspect-[3/4] mb-1 rounded-lg overflow-hidden bg-[#131a2c] border border-purple-400/30 shadow-lg shadow-purple-500/30 flex items-center justify-center">
+                  <div className="animate-float w-[100px] max-[359px]:w-[88px] aspect-[3/4] mb-1 rounded-lg overflow-hidden bg-[#131a2c] border border-purple-400/30 shadow-lg shadow-purple-500/30 flex items-center justify-center">
                     <img src={step.image} alt={step.imageAlt} className="w-full h-full object-contain" loading="lazy" />
                   </div>
                   
                   {/* Step Content */}
-                  <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-lg p-2 shadow-lg shadow-purple-500/10 min-w-[100px] max-w-[110px] flex-1">
+                  <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-lg p-2 shadow-lg shadow-purple-500/10 min-w-[100px] max-w-[110px] max-[359px]:min-w-[88px] max-[359px]:max-w-[88px] flex-1">
                     <h3 className="text-xs font-semibold mb-1 text-purple-100 leading-tight">{step.title}</h3>
                     <p className="text-xs text-purple-200 leading-tight">{step.description}</p>
                   </div>
@@ -86,7 +86,7 @@ const Workflow = () => {
 
                 {/* Arrow between steps (except last) */}
                 {index < steps.length - 1 && (
-                  <div className="mx-1 flex items-start justify-center pt-[61px]">
+                  <div className="mx-0.5 flex items-start justify-center pt-[61px]">
                     <ArrowRight className="w-3 h-3 text-purple-400" />
                   </div>
                 )}

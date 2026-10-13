@@ -11,6 +11,7 @@ import Support from "./pages/Support";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Feedback from "./pages/Feedback";
+import Community from "./pages/Community";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 import { trackPageview } from "@/utils/analytics";
@@ -44,6 +45,7 @@ const App = () => {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/feedback" element={<Feedback />} />
+            <Route path="/community" element={<Community />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

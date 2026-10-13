@@ -39,8 +39,9 @@ const Hero = () => {
 
         {/* Subtitle */}
         <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed mt-4 sm:mt-6">
-          The AI-powered app for actors to rehearse scripts and memorize lines with confidence
-          for performances and auditions.
+          More than a line reader. Scriptly helps actors understand the scene,{" "}
+          <span className="whitespace-nowrap">build the character,</span> and rehearse{" "}
+          <span className="whitespace-nowrap">with confidence.</span>
         </p>
 
         {/* Hero Image */}
@@ -72,14 +73,14 @@ const Hero = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="animate-on-scroll flex flex-row gap-3 sm:gap-4 justify-center">
-          <DownloadCTA location="hero" className="whitespace-nowrap px-3 max-[359px]:px-2 max-[359px]:text-xs" />
+        <div className="animate-on-scroll flex flex-row gap-2 sm:gap-4 justify-center">
+          <DownloadCTA location="hero" className="whitespace-nowrap px-2.5 text-[13px] max-[359px]:px-2 max-[359px]:text-xs sm:px-8 sm:text-base" />
           <Button
             onClick={() => { trackWatchDemo(); setDemoOpen(true); }}
-            className="cta-bounce bg-gradient-to-r from-purple-600/20 to-blue-600/20 hover:from-purple-600/30 hover:to-blue-600/30 text-purple-100 font-medium whitespace-nowrap px-3 max-[359px]:px-2 max-[359px]:text-xs py-2 sm:px-8 sm:py-4 text-sm sm:text-base rounded-xl backdrop-blur-xl border border-purple-400/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 h-auto"
+            className="cta-bounce bg-gradient-to-r from-purple-600/20 to-blue-600/20 hover:from-purple-600/30 hover:to-blue-600/30 text-purple-100 font-medium whitespace-nowrap px-2.5 max-[359px]:px-2 max-[359px]:text-xs py-2 sm:px-8 sm:py-4 text-[13px] sm:text-base rounded-xl backdrop-blur-xl border border-purple-400/30 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 h-auto"
           >
             <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-            Watch Demo
+            Follow the Journey
           </Button>
           <Dialog
             open={demoOpen}
@@ -94,17 +95,18 @@ const Hero = () => {
               }
             }}
           >
-            <DialogContent className="max-w-4xl w-[95vw] p-2 sm:p-4">
+            {/* Vertical (9:16) video: size the popup to the video so there are no side bars */}
+            <DialogContent className="w-auto max-w-[95vw] p-2 sm:p-4">
               <DialogTitle className="sr-only">
-                Scriptly Walkthrough Demo
+                Follow the Journey: Scriptly intro video
               </DialogTitle>
               <video
                 ref={videoRef}
-                src="/scriptly-demo.mov"
+                src="/scriptly-intro.mp4"
                 controls
                 autoPlay
                 playsInline
-                className="w-full max-w-full aspect-video rounded-lg bg-black"
+                className="w-[min(calc(95vw-1rem),calc(85vh*9/16))] aspect-[9/16] rounded-lg bg-black"
               />
             </DialogContent>
           </Dialog>

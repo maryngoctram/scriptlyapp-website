@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Instagram } from "lucide-react";
 import DownloadCTA from "@/components/DownloadCTA";
 import TikTokIcon from "@/components/icons/TikTokIcon";
+import DiscordLink from "@/components/DiscordLink";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -107,6 +108,7 @@ const Navigation = () => {
               >
                 <TikTokIcon className="w-5 h-5" />
               </a>
+              <DiscordLink variant="nav" />
             </div>
           </div>
 
@@ -205,6 +207,7 @@ const Navigation = () => {
                   >
                     <TikTokIcon className="w-5 h-5" />
                   </a>
+                  <DiscordLink variant="nav-mobile" onClick={() => setIsOpen(false)} />
                 </div>
               </div>
             </div>

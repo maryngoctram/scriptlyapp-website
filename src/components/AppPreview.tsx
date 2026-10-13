@@ -46,16 +46,27 @@ const AppPreview = () => {
               <div className="animate-float w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-purple-600 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg shadow-purple-500/30">
                 <Smartphone className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-purple-100 mb-3 sm:mb-4">Scriptly</h3>
-              <p className="text-sm sm:text-base text-purple-200 mb-4 sm:mb-6">
-                "This app has transformed my audition preparation. It helps me memorize my lines faster, and the AI feedback is incredibly insightful."
-              </p>
+              <h3 className="text-xl sm:text-2xl font-bold text-purple-100 mb-3 sm:mb-4">App Store Review</h3>
+              <blockquote className="text-sm sm:text-base text-purple-200 mb-4 sm:mb-6 space-y-2">
+                <p>"Finally, an app that makes practicing my scenes super simple!</p>
+                <p>[...]</p>
+                <p>
+                  The other day I found myself needing to record a self tape for an audition and didn't have
+                  anyone to read the other lines because it was last minute. I connected my phone to a speaker,
+                  loaded up Scriptly and hit record. It was great in a pinch.
+                </p>
+                <p>
+                  I'm definitely keeping this app around.
+                  <br />
+                  Looking forward to all the new updates."
+                </p>
+              </blockquote>
               <div className="flex items-center justify-center gap-1 mb-3 sm:mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-purple-300 fill-purple-300" />
                 ))}
               </div>
-              <p className="text-xs sm:text-sm text-purple-200">— Sarah M., Professional Actor</p>
+              <p className="text-xs sm:text-sm text-purple-200">— LixurLux</p>
             </Card>
           </div>
         </div>

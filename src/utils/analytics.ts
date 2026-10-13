@@ -30,3 +30,9 @@ export function trackSendFeedback() {
     event_category: 'engagement',
   });
 }
+export function trackJoinCommunity(heardFrom: string) {
+  track('join_community_waitlist', {
+    event_category: 'engagement',
+    heard_from: heardFrom,
+  });
+}

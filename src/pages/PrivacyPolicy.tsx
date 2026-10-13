@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import TikTokIcon from "@/components/icons/TikTokIcon";
+import DiscordLink from "@/components/DiscordLink";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
@@ -31,7 +32,7 @@ const PrivacyPolicy = () => {
             By using Scriptly, you agree to the practices described below.
           </p>
           <p className="animate-on-scroll text-xs sm:text-sm text-muted-foreground italic">
-            Last Updated: December 8, 2025
+            Last Updated: October 12, 2026
           </p>
         </div>
       </section>
@@ -98,6 +99,28 @@ const PrivacyPolicy = () => {
                 <p className="mb-4 leading-relaxed">
                   We do not collect personally identifiable usage data beyond what is necessary for app functionality and troubleshooting.
                 </p>
+
+                <h3 className="text-lg font-semibold mb-3 text-foreground mt-6">1.3 Information You Share on Our Website</h3>
+
+                <p className="font-semibold mb-2">Discord Community Waitlist</p>
+                <p className="mb-3 leading-relaxed">
+                  If you join the waitlist for our Discord community at scriptlyapp.com/community, we collect:
+                </p>
+                <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
+                  <li>Your name, email address, and Discord username</li>
+                  <li>Any optional answers you choose to give, such as your role (for example, actor or acting coach), whether you use Scriptly, what you'd like from the community, how you heard about Scriptly, your city or time zone, and any comments</li>
+                  <li>The date and time you signed up and the page you signed up from</li>
+                </ul>
+
+                <p className="font-semibold mb-2">Feedback Form</p>
+                <p className="mb-4 leading-relaxed">
+                  If you send us feedback through our website, we collect your name, email address, and message.
+                </p>
+
+                <p className="font-semibold mb-2">Website Analytics</p>
+                <p className="mb-4 leading-relaxed">
+                  Our website uses Google Analytics to understand how visitors use the site, such as which pages are visited and which buttons are clicked (for example, Download or Join the Waitlist). This uses cookies and collects information like your browser, device type, and approximate location. It does not include the answers you type into our forms.
+                </p>
               </div>
 
               <div className="animate-on-scroll mb-8">
@@ -110,7 +133,8 @@ const PrivacyPolicy = () => {
                 <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
                   <li>Provide core app features (script processing, scene parsing, character detection, scene analysis, TTS)</li>
                   <li>Improve app performance, reliability, and user experience</li>
-                  <li>Provide customer support</li>
+                  <li>Provide customer support and respond to feedback</li>
+                  <li>Send your invite and updates about the Scriptly Discord community, plan community events, and understand how people find Scriptly</li>
                   <li>Manage subscriptions and prevent fraud</li>
                   <li>Comply with legal requirements</li>
                 </ul>
@@ -127,6 +151,7 @@ const PrivacyPolicy = () => {
                   <li>Script content, notes, scenes, and audio are stored locally on your device</li>
                   <li>We do not operate cloud storage for your personal content</li>
                   <li>Third-party AI providers process data only temporarily and do not retain it</li>
+                  <li>Discord community waitlist signups are stored in a private Google Sheet that only the Scriptly team can access</li>
                   <li>We use industry-standard security measures for encrypted data transmission</li>
                 </ul>
               </div>
@@ -147,9 +172,17 @@ const PrivacyPolicy = () => {
                   <li>OpenAI – script analysis and TTS processing</li>
                   <li>Analytics providers – basic usage and crash reporting</li>
                   <li>Apple / RevenueCat – subscription management</li>
+                  <li>Google (Google Sheets and Gmail) – storing Discord community waitlist signups and notifying our team of new signups</li>
+                  <li>Web3Forms – delivering messages sent through our website feedback form</li>
+                  <li>Google Analytics – website usage statistics</li>
                 </ul>
                 <p className="mb-4 leading-relaxed">
                   These providers are contractually prohibited from selling or misusing your data.
+                </p>
+
+                <p className="font-semibold mb-2">Discord</p>
+                <p className="mb-4 leading-relaxed">
+                  When our Discord community opens, joining it is optional. Anything you share on Discord is governed by Discord's own Terms of Service and Privacy Policy.
                 </p>
 
                 <p className="font-semibold mb-2">Legal Requirements</p>
@@ -195,6 +228,7 @@ const PrivacyPolicy = () => {
                   <li>All user-generated content remains on your device</li>
                   <li>Third-party AI providers do not retain script data</li>
                   <li>Account metadata (email, subscription status) is retained only as needed for service operation</li>
+                  <li>Discord community waitlist signups are kept until we've sent your invite and only as long as needed to run the community. You can ask us to delete your signup at any time by emailing <a href="mailto:scriptlyactingapp@gmail.com" className="text-purple-400 hover:text-purple-300 underline">scriptlyactingapp@gmail.com</a></li>
                 </ul>
               </div>
 
@@ -265,6 +299,7 @@ const PrivacyPolicy = () => {
                   <TikTokIcon className="w-5 h-5" />
                 </Button>
               </a>
+              <DiscordLink variant="footer" />
             </div>
           </div>
           <div className="text-center sm:text-left text-purple-200 text-xs sm:text-sm">

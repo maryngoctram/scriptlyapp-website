@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { trackSendFeedback } from "@/utils/analytics";
 import TikTokIcon from "@/components/icons/TikTokIcon";
+import DiscordLink from "@/components/DiscordLink";
 
 const Feedback = () => {
   const [name, setName] = useState("");
@@ -183,6 +184,7 @@ const Feedback = () => {
                   <TikTokIcon className="w-5 h-5" />
                 </Button>
               </a>
+              <DiscordLink variant="footer" />
             </div>
           </div>
           <div className="text-center sm:text-left text-purple-200 text-xs sm:text-sm">
