@@ -1,13 +1,36 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Instagram } from "lucide-react";
-import { useEffect } from "react";
+import { Mail, Instagram, Images, Mic, Sparkles, MessagesSquare, SquareMenu } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 import TikTokIcon from "@/components/icons/TikTokIcon";
 import DiscordLink from "@/components/DiscordLink";
 
+// Phone-only tabs above the App User Guide, matching the app's bottom navigation (same order and icons)
+const GUIDE_TABS = [
+  { label: "Visuals", icon: Images },
+  { label: "Rehearse", icon: Mic },
+  { label: "Insights", icon: Sparkles },
+  { label: "Chat", icon: MessagesSquare },
+  { label: "Notes", icon: SquareMenu },
+];
+
 const Support = () => {
+  const [activeGuide, setActiveGuide] = useState(0);
+  const [guideTabUsed, setGuideTabUsed] = useState(false);
+  const guideGridRef = useRef<HTMLDivElement>(null);
+
+  const selectGuide = (index: number) => {
+    setActiveGuide(index);
+    setGuideTabUsed(true);
+    // If the reader is partway down a long card, bring the new card's top into view below the sticky tabs
+    const grid = guideGridRef.current;
+    if (grid && grid.getBoundingClientRect().top < 0) {
+      window.scrollTo({ top: window.scrollY + grid.getBoundingClientRect().top - 150, behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     // Initialize scroll animations
     import('../utils/scrollAnimations').then(({ startScrollAnimations }) => {
@@ -172,11 +195,46 @@ const Support = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
+          {/* Phone only: one guide card at a time, chosen from tabs that mirror the app's bottom bar */}
+          <div
+            role="tablist"
+            aria-label="App User Guide"
+            className="md:hidden sticky top-16 z-30 -mx-4 px-4 py-2 mb-4 bg-background/90 backdrop-blur-xl border-b border-purple-400/20 grid grid-cols-5 gap-1"
+          >
+            {GUIDE_TABS.map((tab, index) => {
+              const active = index === activeGuide;
+              return (
+                <button
+                  key={tab.label}
+                  type="button"
+                  role="tab"
+                  id={`guide-tab-${index}`}
+                  aria-selected={active}
+                  aria-controls={`guide-panel-${index}`}
+                  onClick={() => selectGuide(index)}
+                  className="flex flex-col items-center gap-1 py-1 focus-visible"
+                >
+                  <span
+                    className={`flex items-center justify-center w-12 h-7 rounded-full transition-colors ${
+                      active ? "bg-gradient-to-r from-purple-600/40 to-blue-600/40 border border-purple-400/50 text-purple-100" : "text-muted-foreground"
+                    }`}
+                  >
+                    <tab.icon className="w-5 h-5" />
+                  </span>
+                  <span className={`text-[11px] leading-none ${active ? "font-semibold text-purple-100" : "text-muted-foreground"}`}>
+                    {tab.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div ref={guideGridRef} className="grid grid-cols-1 lg:grid-cols-6 gap-6">
             {userGuideSections.map((section, index) => (
               <Card
                 key={section.title}
-                className={`lg:col-span-2 ${index === 3 ? "lg:col-start-2" : ""} p-5 sm:p-6 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-xl shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 ${index % 2 === 0 ? "animate-slide-left" : "animate-slide-right"}`}
+                id={`guide-panel-${index}`}
+                className={`${index === activeGuide ? (guideTabUsed ? "animate-visible" : "") : "hidden md:block"} lg:col-span-2 ${index === 3 ? "lg:col-start-2" : ""} p-5 sm:p-6 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-xl shadow-lg shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 ${index % 2 === 0 ? "animate-slide-left" : "animate-slide-right"}`}
               >
                 <div className="mb-5">
                   {section.imageSrc ? (
