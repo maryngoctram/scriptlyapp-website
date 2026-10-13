@@ -191,7 +191,7 @@ const Support = () => {
               App User Guide
             </h2>
             <p className="animate-on-scroll text-responsive-sm text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Use these guided sections for step-by-step help so actors can navigate Scriptly and rehearse with confidence.
+              Step-by-step help for every part of the app. Select a tab below to see how it works, just like the tabs at the bottom of Scriptly.
             </p>
           </div>
 
