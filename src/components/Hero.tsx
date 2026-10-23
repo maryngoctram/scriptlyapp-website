@@ -23,14 +23,15 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center section-padding gradient-hero">
       <div className="container-responsive text-center">
+        {/* Hero content is visible immediately (no scroll fade-in) so it paints fast from the prerendered HTML */}
         {/* Badge */}
-        <div className="animate-on-scroll inline-flex items-center gap-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-xl border border-purple-400/30 rounded-full px-6 py-3 text-sm font-medium text-purple-100 mb-6 sm:mb-8 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105">
+        <div className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-xl border border-purple-400/30 rounded-full px-6 py-3 text-sm font-medium text-purple-100 mb-6 sm:mb-8 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105">
           <Star className="w-4 h-4 text-purple-300 fill-purple-300" />
           Available on the iOS App Store
         </div>
 
         {/* Main Heading */}
-        <h1 className="animate-on-scroll text-responsive-xl font-bold mb-4 sm:mb-6 text-foreground">
+        <h1 className="text-responsive-xl font-bold mb-4 sm:mb-6 text-foreground">
           <span className="block text-scriptly-animated">Scriptly</span>
           <span className="block text-subtitle-animated">
             Master Your Acting Craft
@@ -38,14 +39,14 @@ const Hero = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="animate-on-scroll text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed mt-4 sm:mt-6">
+        <p className="text-responsive-sm text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed mt-4 sm:mt-6">
           More than a line reader. Scriptly helps actors understand the scene,{" "}
           <span className="whitespace-nowrap">build the character,</span> and rehearse{" "}
           <span className="whitespace-nowrap">with confidence.</span>
         </p>
 
         {/* Hero Image */}
-        <div className="animate-scale relative mb-12 sm:mb-16">
+        <div className="relative mb-12 sm:mb-16">
           <div className="absolute inset-0 gradient-spotlight opacity-20 blur-3xl rounded-full"></div>
           {/* Each image's flex-grow is its width/height ratio, so both always render at the same height */}
           <div className="animate-float relative mx-auto flex items-start gap-3 sm:gap-6 w-full max-w-[340px] sm:max-w-[460px] md:max-w-[540px] lg:max-w-[640px]">
@@ -73,7 +74,7 @@ const Hero = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="animate-on-scroll flex flex-row gap-2 sm:gap-4 justify-center">
+        <div className="flex flex-row gap-2 sm:gap-4 justify-center">
           <DownloadCTA location="hero" className="whitespace-nowrap px-2.5 text-[13px] max-[359px]:px-2 max-[359px]:text-xs sm:px-8 sm:text-base" />
           <Button
             onClick={() => { trackWatchDemo(); setDemoOpen(true); }}

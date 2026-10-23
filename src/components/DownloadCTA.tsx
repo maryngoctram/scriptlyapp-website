@@ -2,7 +2,7 @@ import { Download } from "lucide-react";
 import { trackDownloadApp } from "@/utils/analytics";
 import { cn } from "@/lib/utils";
 
-const APP_STORE_URL =
+export const APP_STORE_URL =
   "https://apps.apple.com/us/app/scriptly-ai-acting-rehearsal/id6754227999";
 
 interface DownloadCTAProps {

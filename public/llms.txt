@@ -1,0 +1,25 @@
+# Scriptly
+
+> Scriptly is an AI acting rehearsal app for iPhone and iPad. Actors upload a script or scene, and Scriptly reads the other characters' lines aloud so they can run lines, memorize scenes, and prepare for auditions without a human reader. It also offers AI scene analysis, character analysis, and visualizations of the scene.
+
+- Platform: iOS only (iPhone and iPad). No Android version.
+- Pricing: $14.99/month subscription through the App Store, with a 7-day free trial.
+- Privacy: scripts, notes, scenes, and audio are stored locally on the user's device.
+- Who it's for: film, TV, and theater actors, drama students, and acting coaches, from beginners to professionals.
+- Download: https://apps.apple.com/us/app/scriptly-ai-acting-rehearsal/id6754227999
+- Contact: support@scriptlyapp.com
+
+## Pages
+
+- [Home](https://www.scriptlyapp.com/): what Scriptly does and how it works (upload, AI processing, rehearse)
+- [About](https://www.scriptlyapp.com/about): mission and values
+- [Support Center](https://www.scriptlyapp.com/support): step-by-step app user guide
+- [FAQ](https://www.scriptlyapp.com/faq): pricing, devices, beginners, AI Insights, memorizing lines
+- [Community](https://www.scriptlyapp.com/community): waitlist for the Scriptly Discord community for actors
+- [Privacy Policy](https://www.scriptlyapp.com/privacy-policy)
+- [Terms of Service](https://www.scriptlyapp.com/terms-of-service)
+
+## Social
+
+- Instagram: https://instagram.com/scriptlyapp
+- TikTok: https://www.tiktok.com/@scriptlyactingapp
