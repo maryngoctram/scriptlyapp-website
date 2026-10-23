@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Instagram, Mic, Sparkles, CheckCircle2 } from "lucide-react";
+import { Instagram, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { trackJoinCommunity } from "@/utils/analytics";
@@ -49,9 +49,10 @@ const HEARD_FROM = [
   "Other",
 ];
 
+// Shown as a preview of the future Discord server's channels
 const PERKS = [
-  { icon: Mic, title: "Audition Prep", text: "Swap self-tape tips and get feedback before you submit." },
-  { icon: Sparkles, title: "Shape Scriptly", text: "Try new features first and tell us what to build next." },
+  { channel: "audition-prep", text: "Swap self-tape tips and get feedback before you submit." },
+  { channel: "shape-scriptly", text: "Try new features first and tell us what to build next." },
 ];
 
 const fieldClass =
@@ -149,22 +150,29 @@ const Community = () => {
         </div>
       </section>
 
-      {/* What to expect */}
+      {/* What to expect: a preview of the Discord server's channels */}
       <section className="section-padding bg-background">
-        <div className="container-responsive max-w-md lg:max-w-[504px] mx-auto">
-          <div className="grid grid-cols-2 gap-3 sm:gap-4">
-            {PERKS.map((perk) => (
-              <Card
-                key={perk.title}
-                className="animate-on-scroll p-4 sm:p-5 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-xl text-center"
-              >
-                <div className="w-10 h-10 mx-auto mb-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/30">
-                  <perk.icon className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-sm sm:text-base font-semibold text-purple-100 mb-1">{perk.title}</h3>
-                <p className="text-xs sm:text-sm text-purple-200 leading-snug">{perk.text}</p>
-              </Card>
-            ))}
+        <div className="container-responsive max-w-md mx-auto">
+          <div className="animate-on-scroll rounded-xl border border-purple-400/20 bg-[#0d1020]/80 backdrop-blur-xl shadow-lg shadow-purple-500/10 overflow-hidden">
+            <div className="flex items-center justify-between px-4 py-3 border-b border-purple-400/20">
+              <span className="flex items-center gap-2 text-xs font-bold tracking-widest text-purple-200">
+                <DiscordIcon className="w-4 h-4 text-purple-300" />
+                SCRIPTLY COMMUNITY
+              </span>
+              <span className="text-[10px] uppercase tracking-wider text-muted-foreground">Preview</span>
+            </div>
+            <ul className="p-2">
+              {PERKS.map((perk) => (
+                <li key={perk.channel} className="group flex gap-3 px-3 py-3 rounded-lg hover:bg-purple-500/10 transition-colors">
+                  <span className="text-xl leading-6 text-muted-foreground group-hover:text-purple-300">#</span>
+                  <div>
+                    <p className="font-semibold text-purple-100 group-hover:text-white">{perk.channel}</p>
+                    <p className="text-sm text-purple-200 leading-snug">{perk.text}</p>
+                  </div>
+                </li>
+              ))}
+              <li className="px-3 pt-1 pb-3 text-xs italic text-muted-foreground"># more channels opening soon…</li>
+            </ul>
           </div>
         </div>
       </section>
