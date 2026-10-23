@@ -23,7 +23,6 @@ const COLUMNS = [
   ["discord_username", "Discord username"],
   ["role", "I'm a…"],
   ["uses_scriptly", "Uses Scriptly"],
-  ["interested_in", "Interested in"],
   ["heard_about_scriptly", "Heard about Scriptly from"],
   ["city_or_time_zone", "City / time zone"],
   ["anything_else", "Anything else"],

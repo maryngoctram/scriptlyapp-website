@@ -29,15 +29,6 @@ const ROLES = [
 
 const SCRIPTLY_USE = ["Yes, I use it regularly", "I've tried it", "Not yet"];
 
-const INTERESTS = [
-  "Finding scene and rehearsal partners",
-  "Audition and self-tape tips",
-  "Feedback from other actors",
-  "Live workshops and events",
-  "Weekly scene or monologue challenges",
-  "Helping shape new Scriptly features",
-];
-
 const HEARD_FROM = [
   "Instagram",
   "TikTok",
@@ -67,7 +58,6 @@ const Community = () => {
   const [discord, setDiscord] = useState("");
   const [role, setRole] = useState("");
   const [usesScriptly, setUsesScriptly] = useState("");
-  const [interests, setInterests] = useState<string[]>([]);
   const [heardFrom, setHeardFrom] = useState("");
   const [heardFromOther, setHeardFromOther] = useState("");
   const [location, setLocation] = useState("");
@@ -81,11 +71,6 @@ const Community = () => {
       startScrollAnimations();
     });
   }, []);
-
-  const toggleInterest = (interest: string) =>
-    setInterests((current) =>
-      current.includes(interest) ? current.filter((i) => i !== interest) : [...current, interest]
-    );
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -110,7 +95,6 @@ const Community = () => {
           discord_username: discord,
           role,
           uses_scriptly: usesScriptly,
-          interested_in: interests.join(", "),
           heard_about_scriptly: heard,
           city_or_time_zone: location,
           anything_else: notes,
@@ -243,19 +227,6 @@ const Community = () => {
                     </select>
                   </div>
                 </div>
-
-                <fieldset className="space-y-3">
-                  <legend className="text-sm font-medium text-purple-100 mb-3">What would you like from the community?</legend>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {INTERESTS.map((interest) => (
-                      <label key={interest} className="flex items-start gap-2 text-sm text-purple-200 cursor-pointer">
-                        <input type="checkbox" checked={interests.includes(interest)} onChange={() => toggleInterest(interest)}
-                          className="mt-0.5 h-4 w-4 shrink-0 accent-purple-500" />
-                        {interest}
-                      </label>
-                    ))}
-                  </div>
-                </fieldset>
 
                 <div className="space-y-2">
                   <Label htmlFor="heard" className="text-purple-100">How did you hear about Scriptly?</Label>

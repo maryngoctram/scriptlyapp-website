@@ -108,7 +108,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <ul className="list-disc list-inside mb-4 space-y-2 ml-4">
                   <li>Your name, email address, and Discord username</li>
-                  <li>Any optional answers you choose to give, such as your role (for example, actor or acting coach), whether you use Scriptly, what you'd like from the community, how you heard about Scriptly, your city or time zone, and any comments</li>
+                  <li>Any optional answers you choose to give, such as your role (for example, actor or acting coach), whether you use Scriptly, how you heard about Scriptly, your city or time zone, and any comments</li>
                   <li>The date and time you signed up and the page you signed up from</li>
                 </ul>
 
