@@ -13,12 +13,12 @@ export const faqs = [
     answer: "AI Insights works like a smart acting coach inside the app. It analyzes your scenes and characters so you understand script context, objectives, and emotional beats. Instead of only running lines, you get contextual feedback that helps you make stronger acting choices for auditions and performance."
   },
   {
-    question: "What devices will Scriptly support?",
-    answer: "Scriptly will be available for iOS devices only (iPhone and iPad). There is no version for Android users at the moment. The app is optimized for both phone and tablet use, with features that take advantage of each device's capabilities."
+    question: "What devices does Scriptly support?",
+    answer: "Scriptly is available for iOS devices only (iPhone and iPad). There is no version for Android users at the moment. The app is optimized for both phone and tablet use, with features that take advantage of each device's capabilities."
   },
   {
-    question: "How much will Scriptly cost?",
-    answer: "Scriptly will offer an initial 7-day free trial. The pricing model for the app will be a monthly subscription of $14.99/month paid in the app store."
+    question: "How much does Scriptly cost?",
+    answer: "Scriptly offers a 7-day free trial. After that, it's a monthly subscription of $14.99/month, paid through the App Store."
   },
   {
     question: "Can Scriptly help me memorize my lines?",
