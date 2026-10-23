@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Instagram, Users, Mic, Sparkles, CalendarDays, CheckCircle2 } from "lucide-react";
+import { Instagram, Mic, Sparkles, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { trackJoinCommunity } from "@/utils/analytics";
@@ -50,9 +50,7 @@ const HEARD_FROM = [
 ];
 
 const PERKS = [
-  { icon: Users, title: "Scene partners", text: "Meet actors to run lines and rehearse with." },
-  { icon: Mic, title: "Audition prep", text: "Swap self-tape tips and get feedback before you submit." },
-  { icon: CalendarDays, title: "Live events", text: "Workshops, Q&As, and weekly scene challenges." },
+  { icon: Mic, title: "Audition Prep", text: "Swap self-tape tips and get feedback before you submit." },
   { icon: Sparkles, title: "Shape Scriptly", text: "Try new features first and tell us what to build next." },
 ];
 
@@ -153,8 +151,8 @@ const Community = () => {
 
       {/* What to expect */}
       <section className="section-padding bg-background">
-        <div className="container-responsive max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="container-responsive max-w-md lg:max-w-[504px] mx-auto">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             {PERKS.map((perk) => (
               <Card
                 key={perk.title}
