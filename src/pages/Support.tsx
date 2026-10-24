@@ -292,16 +292,22 @@ const Support = () => {
                     <h4 className="text-sm sm:text-base font-semibold text-purple-100 mb-2">
                       {section.groupsTitle}
                     </h4>
-                    {section.groups.map((group) => (
-                      <div key={group.title} className="mt-3">
-                        <p className="text-sm font-semibold text-purple-100 mb-1">{group.title}</p>
-                        <ul className="space-y-1 text-sm text-purple-200 list-disc list-inside">
-                          {group.items.map((item) => (
-                            <li key={item}>{item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                    {/* Groups sit side by side (two columns on every screen size) to keep the section short */}
+                    <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                      {section.groups.map((group) => (
+                        <div
+                          key={group.title}
+                          className="rounded-xl border border-purple-400/20 bg-purple-500/5 p-3 sm:p-4"
+                        >
+                          <p className="text-sm font-semibold text-purple-100 mb-2">{group.title}</p>
+                          <ul className="space-y-1 text-sm text-purple-200 list-disc pl-4">
+                            {group.items.map((item) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ) : null}
 
