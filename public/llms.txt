@@ -9,6 +9,12 @@
 - Download: https://apps.apple.com/us/app/scriptly-ai-acting-rehearsal/id6754227999
 - Contact: support@scriptlyapp.com
 
+## Founder
+
+Scriptly was built by Andrew Chuong, an actor who couldn't find a scene prep app that actually got him ready: most line readers only feed cues, and learning lines isn't the same as acting. He is building Scriptly in public with the acting community.
+
+- Intro video: "Follow the Journey: Building Scriptly in Public with Founder Andrew Chuong" (59 seconds), on the homepage at https://www.scriptlyapp.com/ (video file: https://www.scriptlyapp.com/scriptly-intro.mp4)
+
 ## How it works
 
 1. Upload Scene: upload a script or scene (photo library, camera, or file) and set preferences.
