@@ -8,6 +8,7 @@ import { Play, Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import DownloadCTA from "@/components/DownloadCTA";
 import { trackWatchDemo } from "@/utils/analytics";
+import { introVideo } from "@/data/introVideo";
 
 const Hero = () => {
   const [demoOpen, setDemoOpen] = useState(false);
@@ -96,20 +97,35 @@ const Hero = () => {
               }
             }}
           >
-            {/* Vertical (9:16) video: size the popup to the video so there are no side bars */}
-            <DialogContent className="w-auto max-w-[95vw] p-2 sm:p-4">
-              <DialogTitle className="sr-only">
-                Follow the Journey: Scriptly intro video
-              </DialogTitle>
+            {/* Vertical (9:16) video: size the popup to the video so there are no side bars.
+                The video leaves room below for the transcript toggle; the popup scrolls when it's open. */}
+            <DialogContent className="w-auto max-w-[95vw] max-h-[95vh] overflow-y-auto p-2 sm:p-4">
+              <DialogTitle className="sr-only">{introVideo.title}</DialogTitle>
               <video
                 ref={videoRef}
-                src="/scriptly-intro.mp4"
-                poster="/scriptly-intro-poster.jpg"
+                src={introVideo.src}
+                poster={introVideo.poster}
                 controls
                 autoPlay
                 playsInline
-                className="w-[min(calc(95vw-1rem),calc(85vh*9/16))] aspect-[9/16] rounded-lg bg-black"
+                className="w-[min(calc(95vw-1rem),calc(78vh*9/16))] aspect-[9/16] rounded-lg bg-black"
               />
+              <details className="group w-[min(calc(95vw-1rem),calc(78vh*9/16))] text-left">
+                <summary className="cursor-pointer list-none text-sm font-medium text-purple-200 hover:text-purple-100 py-1 focus-visible">
+                  <span className="group-open:hidden">Read transcript</span>
+                  <span className="hidden group-open:inline">Hide transcript</span>
+                </summary>
+                <div className="mt-2 space-y-3 text-sm text-purple-200 leading-relaxed">
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">{introVideo.speaker}</p>
+                  {introVideo.transcript.map((line) =>
+                    line.startsWith("[") ? (
+                      <p key={line} className="italic text-muted-foreground">{line}</p>
+                    ) : (
+                      <p key={line}>{line}</p>
+                    )
+                  )}
+                </div>
+              </details>
             </DialogContent>
           </Dialog>
         </div>

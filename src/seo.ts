@@ -2,6 +2,7 @@
 // prerender() export in main.tsx. Add an entry here for every new route.
 import { APP_STORE_URL } from "@/components/DownloadCTA";
 import { faqs } from "@/data/faqs";
+import { introVideo } from "@/data/introVideo";
 
 export const SITE_URL = "https://www.scriptlyapp.com";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
@@ -58,13 +59,14 @@ const homeJsonLd = {
     {
       // The "Follow the Journey" intro video in the homepage hero
       "@type": "VideoObject",
-      name: "Follow the Journey: How Scriptly Was Built",
-      description:
-        "A one-minute intro to Scriptly, the AI acting rehearsal app for iPhone and iPad, and the journey of building it for actors who need a scene partner to run lines and prepare for auditions.",
-      thumbnailUrl: `${SITE_URL}/scriptly-intro-poster.jpg`,
-      contentUrl: `${SITE_URL}/scriptly-intro.mp4`,
-      uploadDate: "2026-10-09",
-      duration: "PT59S",
+      name: introVideo.title,
+      description: introVideo.description,
+      thumbnailUrl: `${SITE_URL}${introVideo.poster}`,
+      contentUrl: `${SITE_URL}${introVideo.src}`,
+      uploadDate: introVideo.uploadDate,
+      duration: introVideo.duration,
+      transcript: introVideo.transcript.join("\n\n"),
+      creator: { "@type": "Person", name: "Andrew Chuong", jobTitle: "Founder", worksFor: { "@id": `${SITE_URL}/#organization` } },
       publisher: { "@id": `${SITE_URL}/#organization` },
     },
   ],
