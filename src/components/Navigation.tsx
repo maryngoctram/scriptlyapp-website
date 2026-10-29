@@ -51,9 +51,12 @@ const Navigation = () => {
   }, [isOpen]);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? "glass-nav shadow-glass" 
+    <nav
+      // Sits below the "Get the app" bar while it's on screen (AppBanner.tsx); top isn't animated so it tracks scrolling
+      style={{ top: "var(--app-banner-offset, 0px)", transitionProperty: "background-color, border-color, box-shadow" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled
+        ? "glass-nav shadow-glass"
         : "glass-nav"
     }`}>
       <div className="container-responsive">
