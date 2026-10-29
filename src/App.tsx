@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
+import AppBanner from "@/components/AppBanner";
 import Home from "./pages/Index";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
@@ -38,6 +39,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <RouteTracker />
+        <AppBanner />
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />

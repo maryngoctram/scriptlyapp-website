@@ -2,6 +2,7 @@
 // prerender() export in main.tsx. Add an entry here for every new route.
 import { APP_STORE_URL } from "@/components/DownloadCTA";
 import { faqs } from "@/data/faqs";
+import { introVideo } from "@/data/introVideo";
 
 export const SITE_URL = "https://www.scriptlyapp.com";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
@@ -54,6 +55,19 @@ const homeJsonLd = {
         priceCurrency: "USD",
         description: "Monthly subscription with a 7-day free trial, billed through the App Store.",
       },
+    },
+    {
+      // The "Follow the Journey" intro video in the homepage hero
+      "@type": "VideoObject",
+      name: introVideo.title,
+      description: introVideo.description,
+      thumbnailUrl: `${SITE_URL}${introVideo.poster}`,
+      contentUrl: `${SITE_URL}${introVideo.src}`,
+      uploadDate: introVideo.uploadDate,
+      duration: introVideo.duration,
+      transcript: introVideo.transcript.join("\n\n"),
+      creator: { "@type": "Person", name: "Andrew Chuong", jobTitle: "Founder", worksFor: { "@id": `${SITE_URL}/#organization` } },
+      publisher: { "@id": `${SITE_URL}/#organization` },
     },
   ],
 };

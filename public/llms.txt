@@ -1,21 +1,42 @@
 # Scriptly
 
-> Scriptly is an AI acting rehearsal app for iPhone and iPad. Actors upload a script or scene, and Scriptly reads the other characters' lines aloud so they can run lines, memorize scenes, and prepare for auditions without a human reader. It also offers AI scene analysis, character analysis, and visualizations of the scene.
+> Scriptly is an AI acting rehearsal app for iPhone and iPad. Actors upload a script or scene, choose their role, and Scriptly's AI reader speaks the other characters' lines so they can run lines, memorize scenes, record self-tapes, and prepare for auditions without a human reader. It also gives scene and character insights, a Readiness Score, an AI chat for questions about the scene, a mood board, and notes.
 
 - Platform: iOS only (iPhone and iPad). No Android version.
 - Pricing: $14.99/month subscription through the App Store, with a 7-day free trial.
-- Privacy: scripts, notes, scenes, and audio are stored locally on the user's device.
+- Privacy: scripts are sent securely to an AI provider only to process requested features and are not stored on Scriptly's servers; scripts, notes, scenes, and audio are stored locally on the user's device.
 - Who it's for: film, TV, and theater actors, drama students, and acting coaches, from beginners to professionals.
 - Download: https://apps.apple.com/us/app/scriptly-ai-acting-rehearsal/id6754227999
 - Contact: support@scriptlyapp.com
 
+## How it works
+
+1. Upload Scene: upload a script or scene (photo library, camera, or file) and set preferences.
+2. Scriptly Personalizes: Scriptly analyzes the dialogue and provides insights for improvement.
+3. Rehearse: run lines with an AI reader, supported by character and scene insights.
+
+## App features (the five tabs in the app)
+
+- Visuals: a mood board for the scene. Add your own images or generate AI images for the set, wardrobe, and props.
+- Rehearse: the AI reader voices the other characters while your lines are highlighted. Change your role, choose the reader's voice, select a range of lines, adjust playback speed, rewind or skip lines, auto-loop a section, hide stage directions, and add notes to specific lines.
+- Insights: a Readiness Score that tracks which lines you actually know when you rehearse out loud, plus Scene Insights (Summary, Key Details, Beats, Subtext, Stakes, Moment Before) and Character Insights (Basic Facts, Music, Motivations, Backstory, Character Arc, Occupation Insight). Every insight can be edited.
+- Chat: ask an AI acting coach questions about the scene or a character, such as motivation, subtext, or what happened before the scene.
+- Notes: a personal workspace for scene observations, character notes, and rehearsal reminders.
+
+## Common questions
+
+- Can Scriptly read the other characters' lines out loud? Yes, in the Rehearse tab, with a choice of voices and playback speeds.
+- Can I use Scriptly for a self-tape? Yes. Scriptly reads the other lines while you record on your camera or another device.
+- Does it work offline? An internet connection is needed to process new scripts and for AI features such as Insights and Chat.
+- Is it good for beginners? Yes, it's designed for actors at every level.
+
 ## Pages
 
-- [Home](https://www.scriptlyapp.com/): what Scriptly does and how it works (upload, AI processing, rehearse)
+- [Home](https://www.scriptlyapp.com/): what Scriptly does and how it works
 - [About](https://www.scriptlyapp.com/about): mission and values
-- [Support Center](https://www.scriptlyapp.com/support): step-by-step app user guide
-- [FAQ](https://www.scriptlyapp.com/faq): pricing, devices, beginners, AI Insights, memorizing lines
-- [Community](https://www.scriptlyapp.com/community): waitlist for the Scriptly Discord community for actors
+- [Support Center](https://www.scriptlyapp.com/support): step-by-step guide to each app tab (Visuals, Rehearse, Insights, Chat, Notes)
+- [FAQ](https://www.scriptlyapp.com/faq): pricing, devices, self-tapes, offline use, privacy, and memorizing lines
+- [Community](https://www.scriptlyapp.com/community): waitlist for the Scriptly Discord community for actors (#audition-prep, #shape-scriptly)
 - [Privacy Policy](https://www.scriptlyapp.com/privacy-policy)
 - [Terms of Service](https://www.scriptlyapp.com/terms-of-service)
 
