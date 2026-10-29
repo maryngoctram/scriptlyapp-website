@@ -4,13 +4,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Instagram, CheckCircle2 } from "lucide-react";
+import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { trackJoinCommunity } from "@/utils/analytics";
 import TikTokIcon from "@/components/icons/TikTokIcon";
 import DiscordIcon from "@/components/icons/DiscordIcon";
 import DiscordLink from "@/components/DiscordLink";
+import Ticket from "@/components/Ticket";
 import DownloadCTA, { DownloadTagline } from "@/components/DownloadCTA";
 
 // Google Apps Script web app that appends each signup to the Scriptly-owned Google Sheet.
@@ -65,6 +66,13 @@ const Community = () => {
   const [website, setWebsite] = useState(""); // honeypot, hidden from people
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  // Shown on the confirmation ticket
+  const [ticket, setTicket] = useState({ seat: "", date: "" });
+  const issueTicket = () =>
+    setTicket({
+      seat: String(Math.floor(100 + Math.random() * 900)),
+      date: new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
+    });
 
   useEffect(() => {
     import("../utils/scrollAnimations").then(({ startScrollAnimations }) => {
@@ -103,6 +111,7 @@ const Community = () => {
         }),
       });
       trackJoinCommunity(heardFrom || "Not answered");
+      issueTicket();
       setSubmitted(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch {
@@ -166,14 +175,35 @@ const Community = () => {
         <div className="container-responsive max-w-2xl mx-auto">
           <Card className="animate-on-scroll p-6 sm:p-10 bg-gradient-to-r from-purple-600/10 to-blue-600/10 backdrop-blur-xl border border-purple-400/20 rounded-xl shadow-lg shadow-purple-500/10">
             {submitted ? (
-              <div className="text-center py-6" role="status">
-                <CheckCircle2 className="w-12 h-12 text-purple-300 mx-auto mb-4" />
-                <h2 className="text-xl sm:text-2xl font-bold text-purple-100 mb-2">You're on the list!</h2>
-                <p className="text-sm sm:text-base text-purple-200 mb-6">
-                  Thanks{name ? `, ${name.split(" ")[0]}` : ""}. We'll email your Discord invite as soon
-                  as the community opens.
+              <div className="py-2" role="status">
+                <h2 className="text-xl sm:text-2xl font-bold text-purple-100 mb-1 text-center">You're on the list!</h2>
+                <p className="text-sm sm:text-base text-purple-200 mb-6 text-center">Here's your ticket.</p>
+                <Ticket stub="ADMIT ONE" className="max-w-md mx-auto">
+                  <div className="flex items-center gap-2 text-[10px] sm:text-xs font-bold tracking-widest text-purple-300 mb-3">
+                    <DiscordIcon className="w-4 h-4" />
+                    SCRIPTLY COMMUNITY
+                  </div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">Guest</p>
+                  <p className="text-xl sm:text-2xl font-bold text-foreground mb-4 truncate">{name || "Actor"}</p>
+                  <div className="grid grid-cols-3 gap-3 text-left border-t border-dashed border-purple-400/30 pt-3">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Event</p>
+                      <p className="text-sm font-semibold text-purple-100">Discord Waitlist</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Joined</p>
+                      <p className="text-sm font-semibold text-purple-100">{ticket.date}</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Seat</p>
+                      <p className="text-sm font-semibold text-purple-100">No. {ticket.seat}</p>
+                    </div>
+                  </div>
+                </Ticket>
+                <p className="text-sm sm:text-base text-purple-200 mt-6 text-center">
+                  We'll email your Discord invite as soon as the community opens.
                 </p>
-                <p className="text-sm text-purple-200">
+                <p className="text-sm text-purple-200 mt-2 text-center">
                   In the meantime, follow along on{" "}
                   <a href="https://instagram.com/scriptlyapp" target="_blank" rel="noopener noreferrer" className="underline text-purple-100">Instagram</a>{" "}
                   and{" "}
