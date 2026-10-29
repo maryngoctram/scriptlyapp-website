@@ -37,10 +37,6 @@ export const faqs = [
     answer: "Scriptly offers a 7-day free trial. After that, it's a monthly subscription of $14.99/month, paid through the App Store."
   },
   {
-    question: "How do I cancel my subscription?",
-    answer: "Subscriptions are managed by Apple. On your iPhone or iPad, open Settings, tap your name, then Subscriptions, choose Scriptly, and tap Cancel Subscription. To avoid being charged after your free trial, cancel at least 24 hours before the trial ends."
-  },
-  {
     question: "Is my script private?",
     answer: "Yes. When you upload a script, it's sent securely to our AI provider only to process the features you use, and it isn't stored on our servers. Your scripts, notes, and scenes are saved locally on your device. See our Privacy Policy for details."
   }
