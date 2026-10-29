@@ -104,6 +104,7 @@ const Hero = () => {
               <video
                 ref={videoRef}
                 src="/scriptly-intro.mp4"
+                poster="/scriptly-intro-poster.jpg"
                 controls
                 autoPlay
                 playsInline

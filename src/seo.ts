@@ -55,6 +55,18 @@ const homeJsonLd = {
         description: "Monthly subscription with a 7-day free trial, billed through the App Store.",
       },
     },
+    {
+      // The "Follow the Journey" intro video in the homepage hero
+      "@type": "VideoObject",
+      name: "Follow the Journey: How Scriptly Was Built",
+      description:
+        "A one-minute intro to Scriptly, the AI acting rehearsal app for iPhone and iPad, and the journey of building it for actors who need a scene partner to run lines and prepare for auditions.",
+      thumbnailUrl: `${SITE_URL}/scriptly-intro-poster.jpg`,
+      contentUrl: `${SITE_URL}/scriptly-intro.mp4`,
+      uploadDate: "2026-10-09",
+      duration: "PT59S",
+      publisher: { "@id": `${SITE_URL}/#organization` },
+    },
   ],
 };
 
