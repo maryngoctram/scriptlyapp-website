@@ -86,13 +86,13 @@ export const PAGES: Record<string, PageMeta> = {
   "/": {
     title: "Scriptly | AI App for Actors to Rehearse, Run Lines, and Prepare for Auditions",
     description:
-      "Scriptly helps actors rehearse scripts, run lines, and memorize lines with AI-powered coaching and script reader tools for stronger audition prep. Available on iOS.",
+      "Scriptly helps actors rehearse scripts, run lines, and memorize lines with AI coaching and script reader tools for stronger audition prep. Available on iOS.",
     jsonLd: homeJsonLd,
   },
   "/about": {
     title: "About Scriptly | The AI Acting Rehearsal App Built for Actors",
     description:
-      "Scriptly combines AI with time-tested acting technique so actors can rehearse scripts, run lines, and prepare for auditions with clarity. Learn our mission and values.",
+      "Scriptly combines AI with time-tested acting technique so actors can rehearse scripts, run lines, and prepare for auditions. Learn our mission and values.",
   },
   "/support": {
     title: "Scriptly Support Center | App User Guide and Help",
